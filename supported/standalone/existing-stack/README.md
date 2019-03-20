@@ -1,7 +1,6 @@
 # Ribbon SBC AWS SBC Instantiate Pre-Requisites
 
-Prior to deploying an SBC, the following activities should be completed.
-See sections below for details.
+Prior to deploying an SBC, the following activities should be completed. See sections below for details.
 
   - Creating Placement Groups
   - Creating VPC for SBC
@@ -43,8 +42,7 @@ Note
 
 Use of Placement Groups is optional and not required.
 
-If using a Placement group, it is recommended to use a cluster placement
-group so all resources are within the same AZ to maximize performance.
+If using a Placement group, it is recommended to use a cluster placement group so all resources are within the same AZ to maximize performance.
 
 You can create a placement group in advance, or create one during
 Instance instantiation.
@@ -55,13 +53,13 @@ To create a placement group, perform the following steps:
 
 1.  Navigate to EC2 Management Console.
 
-2.  Select**NETWORK & SECURITY\> Placement Groups**.  
+2.  Select**NETWORK & SECURITY\ >  Placement Groups**.  
       
     The**Placement Groups**page displays.
 
-3.  Click**Create Placement Groups**.  
+3.  Click **Create Placement Groups**.  
       
-    The**Create Placement Groups**window displays.
+    The **Create Placement Groups** window displays.
 
 4.  Enter a name for placement group.
 
@@ -74,7 +72,7 @@ To create a placement group, perform the following steps:
     2.  A spread placement group spreads instances across distinct
         hardware to improve redundancy.
 
-6.  Click**Create**.
+6.  Click **Create**.
 
 # Creating VPC for SBC
 
@@ -92,12 +90,11 @@ An SBC deployment requires a VPC with at least 4 IPv4 subnets:
 
 All 4 subnets must be located in the same availability zone.
 
-The suggested size of the VPC is CIDR x.x.x.x/16, where each subnet has
-a CIDR of x.x.x.x/24, although smaller CIDR ranges can be used.
+The suggested size of the VPC is CIDR x.x.x.x/16, where each subnet has a CIDR of x.x.x.x/24, although smaller CIDR ranges can be used.
 
 ## To create a new VPC
 
-1.  Navigate to the VPC Dashboard<https://console.aws.amazon.com/vpc/>
+1.  Navigate to the VPC Dashboard <https://console.aws.amazon.com/vpc/ > 
 
 2.  Click on **Your VPCs** on the panel at left  
     The Create VPC window appears.
@@ -107,14 +104,12 @@ a CIDR of x.x.x.x/24, although smaller CIDR ranges can be used.
 
 4.  Enter a **Name Tag** to uniquely identify this new VPC.
 
-5.  Enter an **IPv4 CIDR block** value which is large enough to support
-    4 subnets. The suggested size is CIDR x.x.x.x/24
+5.  Enter an **IPv4 CIDR block** value which is large enough to support 4 subnets. The suggested size is CIDR x.x.x.x/24
 
 6.  Click on **Create**.  
     On success, the new VPC ID will be shared on a new window.
 
-For further information about creating VPCs
-see<https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html>
+For further information about creating VPCs see <https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html > 
 
 # Creating Internet Gateway for SBC
 
@@ -125,17 +120,17 @@ potentially for signaling and media, depending on customer needs.
 
 To create an Internet Gateway perform the following steps:
 
-1.  Navigate to the VPC Dashboard<https://console.aws.amazon.com/vpc/>
+1.  Navigate to the VPC Dashboard <https://console.aws.amazon.com/vpc/ > 
 
-2.  Click on **Internet Gateways**on the panel at left.  
+2.  Click on **Internet Gateways** on the panel at left.  
     The Create internet gateway window appears.
 
-3.  Click on**Create Internet Gateway**.  
+3.  Click on **Create Internet Gateway**.  
     The Create Internet Gateway window appears.
 
-4.  Enter a**Name Tag**to uniquely identify this new Internet Gateway.
+4.  Enter a **Name Tag** to uniquely identify this new Internet Gateway.
 
-5.  Click on**Create**.  
+5.  Click on **Create**.  
     On success, the new Internet gateway ID will be shared on a new
     window.
 
@@ -148,14 +143,12 @@ To create an Internet Gateway perform the following steps:
 
 8.  Select the desired VPC from the pulldown menu and then click Attach.
 
-9.  The user will be returned to the Create internet gateway screen. The
-    new internet gateway should now have state attached and list the
+9.  The user will be returned to the Create internet gateway screen. The new internet gateway should now have state attached and list the
     appropriate VPC id next to it.
 
 
 
-For more information concerning internet gateways
-see<https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html>
+For more information concerning internet gateways see <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html > 
 
 # Creating Subnets for SBC
 
@@ -172,18 +165,16 @@ or 5 IPv4 subnets:
 
   - Packet 1 (PKT1)
 
-  - High-Availability-forwarding Engine Public Subnet (HFE
-    Public-facing) - depending on deployment type
+  - High-Availability-forwarding Engine Public Subnet (HFE Public-facing) - depending on deployment type
 
 
 
-These subnets can be created within an existing VPC or a new VPC can be
-allocated. All 4 subnets must reside within the same region/VPC and
+These subnets can be created within an existing VPC or a new VPC can be allocated. All 4 subnets must reside within the same region/VPC and
 availability zone.
 
 To create a new subnet with CIDR x.x.x.x/20 within an existing VPC:
 
-1.  Navigate to the VPC Dashboard<https://console.aws.amazon.com/vpc/>
+1.  Navigate to the VPC Dashboard <https://console.aws.amazon.com/vpc/ > 
 
 2.  Select "Your VPCs" on the taskbar at left to see the list of VPCs
     available
@@ -209,31 +200,20 @@ To create a new subnet with CIDR x.x.x.x/20 within an existing VPC:
     IPv4 CIDR block, e.g. x.x.64.0/20
 
 For more information on creating subnets in AWS, refer
-to<https://docs.aws.amazon.com/vpc/latest/userguide/working-with-vpcs.html#AddaSubnet>
+to <https://docs.aws.amazon.com/vpc/latest/userguide/working-with-vpcs.html#AddaSubnet > 
 
 # Creating Route Tables for SBC
 
-In order for your new Subnets to have routing outside the VPC, you must
-ensure the new subnets created have appropriate inbound and outbound
-routes in a route table. You can choose to update the master route
-table (which is implicitly assigned to your new subnets - or you can
-define a new route table and explicitly associate it with your subnets.
+In order for your new Subnets to have routing outside the VPC, you must ensure the new subnets created have appropriate inbound and outbound routes in a route table. You can choose to update the master route table (which is implicitly assigned to your new subnets - or you can define a new route table and explicitly associate it with your subnets.
 In this example we will create an explicit route table and assign the
-MGT, PKT0, PKT1 and HFE(if required) subnets to it. Note that you could
-create separate route tables for each of the MGT, PKT0, PKT1 and HFE
-subnets if desired.
+MGT, PKT0, PKT1 and HFE(if required) subnets to it. Note that you could create separate route tables for each of the MGT, PKT0, PKT1 and HFE subnets if desired.
 
 AWS uses the most specific route in your route table that matches the
 traffic to determine how to route the traffic (longest prefix match).
 You need to have the rule to route all the non-Virtual Private Clouds
-(VPC) traffic to internet gateway or ensure that the internet traffic is
-routed through your own NAT instance or Gateway. If you cannot provide a
-way to send out the SBC API query to the internet, the HA solution fails
-(SBC) in AWS.
+(VPC) traffic to internet gateway or ensure that the internet traffic is routed through your own NAT instance or Gateway. If you cannot provide a way to send out the SBC API query to the internet, the HA solution fails (SBC) in AWS.
 
-The routes to the IPv4 and IPv6 addresses or CIDR blocks are independent
-of each other.AWS uses the most specific route that matches either IPv4
-traffic or IPv6 traffic to determine how to route the traffic.
+The routes to the IPv4 and IPv6 addresses or CIDR blocks are independent of each other. AWS uses the most specific route that matches either IPv4 traffic or IPv6 traffic to determine how to route the traffic.
 
 For example, the following route table has a route for IPv4 Internet
 traffic 0.0.0.0/0 that points to an Internet gateway. Any traffic
@@ -251,55 +231,54 @@ from the subnet uses the internet gateway.
 
 
 For detailed information on the Route Table, refer to
-<https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html>
+ <https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html > 
 
 ## To create a Route table for MGT0, PKT0, PKT1, HFE
 
-1.  Navigate to the VPC Dashboard<https://console.aws.amazon.com/vpc/>
+1.  Navigate to the VPC Dashboard <https://console.aws.amazon.com/vpc/ > 
 
-2.  Select**Route Tables**on the taskbar at left to see the list of
+2.  Select **Route Tables** on the taskbar at left to see the list of
     route tables available
 
-3.  Click on**Create Route Table**to create a route table for MGT0 .
+3.  Click on **Create Route Table** to create a route table for MGT0 .
 
 4.  Enter a name for the route table and select the VPC that contains
     your subnet.
 
-5.  Click on**Create**.  
+5.  Click on **Create**.  
     The route Table will be created and the route table id returned.
 
-6.  Click on the**Close**button to close the screen.
+6.  Click on the **Close** button to close the screen.
 
 7.  The Route Table screen is once again displays. You will be able to
     see the new route table in the list of route tables.
 
-8.  Select your route table from the list and select**Edit
-    routes**from the**Actions**pulldown to open the Edit Routes
+8.  Select your route table from the list and select **Edit
+    routes** from the **Actions** pulldown to open the Edit Routes
     screen.  
       
     By default the new subnet masks will be populated to allow inbound
-    traffic to reach the new subnets, and for each subnet to be able to
-    reach the other.
+    traffic to reach the new subnets, and for each subnet to be able to reach the other.
 
-9.  Click on**Add route**and select**Internet Gateway**from the
+9.  Click on **Add route** and select **Internet Gateway** from the
     Target pulldown to add a destination for outbound traffic to reach
     the internet gateway associated with your VPC
 
 10. Select the internet gateway associated with your VPC.
 
-11. Click on**Save routes**to save the route.
+11. Click on **Save routes** to save the route.
 
-12. Click on the**Close**button to close the screen.
+12. Click on the **Close** button to close the screen.
 
 13. The Route Table screen is once again displays.
 
-14. Select your route table from the list and select**Edit subnet
-    associates**from the**Actions**pulldown.  
+14. Select your route table from the list and select **Edit subnet
+    associates** from the **Actions** pulldown.  
       
     The Edit subnets association screen appears.
 
 15. Select the subnets that you would want to enable external routing on
-    (e.g. MGT0, PKT0, PKT1, HFE) and click on**Save**
+    (e.g. MGT0, PKT0, PKT1, HFE) and click on **Save**
 
 16. You will be returned to the route table screen. The Explicitly
     Associate with field in the table should show that 3 subnets are
@@ -392,8 +371,7 @@ Public-facing/Management Port (eth1)
 | Custom TCP rule | TCP          | 5061           | x.x.x.x/y is the PKT0 or PKT1 subnet CIDR which is to have external connectivity |
 | Custom UDP rule | UDP          | 1024-65535     | x.x.x.x/y is the PKT0 or PKT1 subnet CIDR which is to have external connectivity |
 
-The source ranges for the HFE Private-facing Port security group may be
-the private subnet CIDR of the SBC PKT0 or PKT1 subnets.
+The source ranges for the HFE Private-facing Port security group may be the private subnet CIDR of the SBC PKT0 or PKT1 subnets.
 
 
 
@@ -419,8 +397,8 @@ remaining ports are blocked.
 
 Note
 
-Refer to the**Management Security Group**,**HA Security Group**,
-and**Packet Security Group**tables for the minimum required security
+Refer to the **Management Security Group**,**HA Security Group**,
+and **Packet Security Group** tables for the minimum required security
 group rulesfor the SBC to function.
 
 Note
@@ -431,37 +409,34 @@ and 5061.
 
 ## Create Security Groups
 
-1.  Navigate to**EC2 Management Console**.
+1.  Navigate to **EC2 Management Console**.
 
-2.  From the left pane, click**Security Groups**.
+2.  From the left pane, click **Security Groups**.
 
-3.  Click**Create Security Group**. The**Create Security Group**page
-    displays.
+3.  Click **Create Security Group**. The **Create Security Group** page displays.
 
-4.  Enter a**Security group name** for the MGT0 security
-    group****and**Description.  
-    **
+4.  Enter a **Security group name** for the MGT0 security
+    group and **Description**
 
-5.  Select an appropriate**VPC**from the list.
+5.  Select an appropriate **VPC** from the list.
 
-6.  Click**Add Rule**to create security group rules as suggested
+6.  Click **Add Rule** to create security group rules as suggested
     above.
 
->  Note
-> 
-> By default, the**Inbound**rules tab is displayed on the screen.
+ >   Note
+ >  
+ >  By default, the **Inbound** rules tab is displayed on the screen.
 
-7.  Click**Create**.
+7.  Click **Create**.
 
-8.  Repeat steps**3**through**7**to create the new security group
+8.  Repeat steps **3** through **7** to create the new security group
     for HA, PKT0, and PKT1 subnets.
 
 9.  If deploying with a High-availability Forwarding Engine option,
-    repeat steps **3** through **7** to create a new security group for
-    the HFE public- and private-facing subnets.
+    repeat steps **3** through **7** to create a new security group for the HFE public- and private-facing subnets.
 
-> For more information, refer
-> to<https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html>
+ >  For more information, refer
+ >  to <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html > 
 
 # Creating Key Pairs for SBC
 
@@ -469,7 +444,6 @@ The SBC requires 2 key pairs to be supplied at deployment time to
 service the linux shell and administrative users:
 
   - linuxadmin user keypair
-
   - admin user keypair
 
 These should be created in advance of deployment.
@@ -478,19 +452,19 @@ To create a key pair, perform the following steps:
 
 1.  Navigate to EC2 Management Console.
 
-2.  Select**NETWORK & SECURITY\> Key Pairs**.  
+2.  Select **NETWORK & SECURITY\ >  Key Pairs**.  
       
-    The**Create Key Pair**page displays.
+    The **Create Key Pair**page displays.
 
-3.  Click**Create Key Pair**.  
-    The**Create Key Pair**window displays.
+3.  Click **Create Key Pair**.  
+    The **Create Key Pair** window displays.
 
 4.  Enter a **Key pair name** for your linuxadmin key pair.
 
-5.  Click**Create**.
+5.  Click **Create**.
 
-> The new key pair file (e.g. my-linuxadmin-keypair.pem) will be be
-> pushed to the user.
+ >  The new key pair file (e.g. my-linuxadmin-keypair.pem) will be be
+ >  pushed to the user.
 
 6.  Save the \*.pem file for linuxadmin user to your PC. This keypair
     will be required later to enable login to the SBC linux shell.
@@ -498,20 +472,18 @@ To create a key pair, perform the following steps:
 7.  Repeat the steps above for the "admin" user.
 
 For more information about key pairs refer
-to:<https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-key-pairs.html>
+to: <https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-key-pairs.html > 
 
 # Creating Identity and Access Management -IAM- Role for HFE
 
-AWS Identity and Access Management (IAM) is a web service that helps to
-securely control user access to AWS resources through authentication and
-authorization. For more information on IAM, refer
-to<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UsingIAM.html>
+AWS Identity and Access Management (IAM) is a web service that helps to securely control user access to AWS resources through authentication and authorization. For more information on IAM, refer
+to <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UsingIAM.html > 
 .
 
 
 
-Create a policy for the HFE node using the JSON method(refer
-to<https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html>).
+Create a policy for the HFE node using the JSON method (refer
+to <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html > ).
 The policy details are shown below.
 
 Attach this policy to a new IAM role. You must enter this IAM role in
@@ -569,7 +541,7 @@ To create a Policy and associate it to a Role for SBC follow these
 steps:
 
 1.  Navigate to **IAM**
-    Dashboard:<https://console.aws.amazon.com/iam/home>
+    Dashboard: <https://console.aws.amazon.com/iam/home > 
 
 2.  Select **Policies** from the left panel.  
     The **Policies**page displays.
@@ -582,41 +554,45 @@ steps:
 
 5.  Update the policy to include the content below
 
-> {
-> 
-> "Version": "2012-10-17",
-> 
-> "Statement": \[
-> 
-> {
-> 
-> "Effect": "Allow",
-> 
-> "Action": \[
-> 
-> "s3:Get\*",
-> 
-> "s3:List\*"
-> 
-> \],
-> 
-> "Resource": "\*"
-> 
-> }
-> 
-> \]
-> 
-> }
+ >  {
+ >  
+ >  "Version": "2012-10-17",
+ >  
+ >  "Statement": \[
+ >  
+ >  {
+ >  
+ >  "Effect": "Allow",
+ >  
+ >  "Action": \[
+ >  
+ >  "ec2:DescribeInstances",
+ >  "ec2:DescribeAddresses",
+ >  "ec2:DescribeNetworkInterfaces",
+ >  "ec2:DescribeInstanceAttribute",
+ >  "ec2:DescribeRegions",
+ >  "ec2:ModifyInstanceAttribute",
+ >  "ec2:DescribeSubnets",
+ >  "s3:Get\*",
+ >  "s3:List\*",
+ >  "events:PutRule",
+ >  "cloudwatch:PutMetricData"
+ >  
+ >  \],
+ >  
+ >  "Resource": "\*"
+ >  
+ >  }
+ >  
+ >  \]
+ >  
+ >  }
 
 6.  Click on Review Policy.
 
-7.  Enter a name for the policy and a description, then click on Create
-    policy.  
-    Create Policy window
+7.  Enter a name for the policy and a description, then click on Create policy.  
 
-8.  The user will get an indication that the policy was created and will
-    be returned to the create policy window  
-    Create Policy Successful
+8.  The user will get an indication that the policy was created and will be returned to the create policy window  
 
 9.  Click on Roles.  
     The Roles window will appear.
@@ -624,8 +600,7 @@ steps:
 10. Click on Create role.  
     The Create role window will appear
 
-11. Select **EC2** as the service that will use this role, then click on
-    **Next: Permissions**
+11. Select **EC2** as the service that will use this role, then click on **Next: Permissions**
 
 12. The Attach permissions policies window will appear.
 
@@ -642,13 +617,11 @@ steps:
 
 17. The user will be returned to the Create role window.
 
-18. You can verify that your role was created by typing the name of the
-    created role in the search area.
+18. You can verify that your role was created by typing the name of the created role in the search area.
 
 
 
-For more information on creating and using IAM roles and policies, refer
-toAWS online documentation at[IAM
+For more information on creating and using IAM roles and policies, refer to AWS online documentation at[IAM
 Roles](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html)and[IAM
 Policies](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-for-amazon-ec2.html).
 
@@ -656,14 +629,12 @@ Policies](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-for-am
 
 Launching of a High-availabilty Front End instance requires access to
 the HFE.sh script. This script is to be uploaded to an S3 bucket
-available to your region in advance of a launch attempt of the HFE. The
-HFE.sh script and role can be re-used across multiple instances of HFE
-nodes in your region.
+available to your region in advance of a launch attempt of the HFE. The HFE.sh script and role can be re-used across multiple instances of HFE nodes in your region.
 
 To make HFE.sh script available do the following:
 
-1.  Click the**Services**drop-down list.  
-    The**Services**list is displayed.
+1.  Click the **Services** drop-down list.  
+    The **Services** list is displayed.
 
 2.  From the left pane click **S3**
 
@@ -690,8 +661,8 @@ To make HFE.sh script available do the following:
 11. Select **Do not grant Amazon S3 Log Delivery group write access to
     this bucket** from the pulldown under **Manage system permissions**.
 
-12. Click**Next**.  
-    The**Review**page of**Create bucket**is displayed.
+12. Click **Next**.  
+    The **Review** page of **Create bucket** is displayed.
 
 13. Click **Create bucket**.  
     The new bucket is created with the name you chose. The user is
@@ -700,27 +671,23 @@ To make HFE.sh script available do the following:
 14. Click on the name of the newly created bucket in the list.  
     The S3 bucket contents are listed.
 
-15. Optionally a folder can be created to upload the HFE.sh script into
-    by clicking **Create folder** and providing a folder name.
+15. Optionally a folder can be created to upload the HFE.sh script into by clicking **Create folder** and providing a folder name.
 
 16. Click on **Upload** and then select the HFE.sh script from your
     computer for upload, then click on **Upload**.
 
-17. Click on the newly added file name and record the **Object URL** of
-    the script. This will be needed later.
+17. Click on the newly added file name and record the **Object URL** of the script. This will be needed later.
 
 # Finding Amazon Linux 2 AMI ID for use in HFE deployments
 
 The High-Availabiltity Front-End (HFE) is a lightweight instance with
 minimal processes used to forward packets from Public IP addresses to
-private IP addresses on the SBC. The HFE runs on a standard Amazon Linux
-2 instance.
+private IP addresses on the SBC. The HFE runs on a standard Amazon Linux 2 instance.
 
-To find the AMI id of the latest Amazon Linux 2 image in your region do
-the following:
+To find the AMI id of the latest Amazon Linux 2 image in your region do the following:
 
-1.  Navigate to the**EC2 Management Console** for the region in which
-    you plan to launch the HFE and SBC**.**
+1.  Navigate to the **EC2 Management Console** for the region in which
+    you plan to launch the HFE and SBC.
 
 2.  Click on **Launch Instance.**  
     The Choose an Amazon Machine Image (AMI) screen appears
@@ -729,4 +696,6 @@ the following:
     list and copy the AMI id next to for 64-bit x86.  
     This AMI ID will be used later when deploying the HFE using
     CloudFormation.
+
+
 
