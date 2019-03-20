@@ -489,52 +489,31 @@ The policy details are shown below.
 Attach this policy to a new IAM role. You must enter this IAM role in
 the template(**IAMRoleHFE:IAM rol**)for HFE instances.
 
-
-
-{
-
-"Version": "2012-10-17",
-
-"Statement": \[
-
-{
-
-"Effect": "Allow",
-
-"Action": \[
-
-"ec2:DescribeInstances",
-
-"ec2:DescribeAddresses",
-
-"ec2:DescribeNetworkInterfaces",
-
-"ec2:DescribeInstanceAttribute",
-
-"ec2:DescribeRegions",
-
-"ec2:ModifyInstanceAttribute",
-
-"ec2:DescribeSubnets",
-
-"s3:Get\*",
-
-"s3:List\*",
-
-"events:PutRule",
-
-"cloudwatch:PutMetricData"
-
-\],
-
-"Resource": "\*"
-
-}
-
-\]
-
-}
-
+ >  
+ >  
+ >  {
+ >  "Version": "2012-10-17",
+ >  "Statement": \[
+ >  {
+ >  "Effect": "Allow",
+ >  "Action": \[
+ >  "ec2:DescribeInstances",
+ >  "ec2:DescribeAddresses",
+ >  "ec2:DescribeNetworkInterfaces",
+ >  "ec2:DescribeInstanceAttribute",
+ >  "ec2:DescribeRegions",
+ >  "ec2:ModifyInstanceAttribute",
+ >  "ec2:DescribeSubnets",
+ >  "s3:Get\*",
+ >  "s3:List\*",
+ >  "events:PutRule",
+ >  "cloudwatch:PutMetricData"
+ >  \],
+ >  "Resource": "\*"
+ >  }
+ >  \]
+ >  }
+ >  
 
 
 To create a Policy and associate it to a Role for SBC follow these
