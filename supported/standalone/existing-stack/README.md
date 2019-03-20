@@ -87,7 +87,7 @@ To instantiate  a standalone instance:
 <td>System configuration</td>
 <td><strong>AMIID</strong></td>
 <td>Amazon Machine Image (AMI) is an encrypted machine image which is like a template of a computer's root drive. For example,  ami-xxxxxxxx.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -95,7 +95,7 @@ To instantiate  a standalone instance:
 <td>System configuration</td>
 <td><strong>CERole</strong></td>
 <td>The Role of the SBC. In the case of Standalone SBC, the value of CERole is not used, so any value can be selected.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -103,7 +103,7 @@ To instantiate  a standalone instance:
 <td>Elastic IP configuration</td>
 <td><strong>EipAssociationOnMgt</strong></td>
 <td>Select <strong>Yes  </strong>from the drop-down  to associate EIP for MGT0 interface to login and access SBC application from public networks. Select <strong>No</strong> if not requiring EIP or if wishing to use a pre-allocated EIP for management.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -123,16 +123,16 @@ To instantiate  a standalone instance:
 <p>Cannot exceed 64 characters in length</p>
 </blockquote></li>
 </ul></td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 </tr>
 <tr class="odd">
 <td>System configuration</td>
 <td><strong>InstanceType</strong></td>
 <td><p>Type of instance that is created from stack.</p>
 <p>Note: Sonus recommends m5.xlarge or higher instance type if this instance type is available in your zone. Use c5.2xlarge instance type or higher to handle more calls with transcoding.</p></td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -140,7 +140,7 @@ To instantiate  a standalone instance:
 <td>Storage configuration</td>
 <td><strong>IOPS</strong></td>
 <td>Enter IOPS reservation for io 1 type EBS volume</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -148,7 +148,7 @@ To instantiate  a standalone instance:
 <td>Security configuration</td>
 <td><strong>LinuxAdmin SshKey</strong></td>
 <td>Existing EC2 KeyPair name to enable SSH access to linux shell on SBC instance.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -156,7 +156,7 @@ To instantiate  a standalone instance:
 <td>Security configuration</td>
 <td><strong>Admin SshKey</strong></td>
 <td>Existing EC2 KeyPair name to enable SSH access to admin CLI on SBC instance.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -165,7 +165,7 @@ To instantiate  a standalone instance:
 <td><strong>Number of Alternate IP on PKT0</strong></td>
 <td><p>Alternate IP address for packet port 0.</p>
 <p><strong>Note</strong>:  Default is 1. If you are using more than one IP for alternate IPs, use comma separated IPs list.</p></td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -174,7 +174,7 @@ To instantiate  a standalone instance:
 <td><strong>Number of Alternate IP on PKT1</strong></td>
 <td><p>Alternate IP address for packet port 1.</p>
 <p><strong>Note</strong>:  Default is 1. If you are using more than one IP for alternate IPs, use comma separated IPs list.</p></td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -183,7 +183,7 @@ To instantiate  a standalone instance:
 <td><strong>Number of EIP on PKT 0</strong></td>
 <td><p>The number of Elastic IPs to be associated with PKT 0 interface.</p>
 <p><strong>Note</strong>: Default is 0</p></td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -192,7 +192,7 @@ To instantiate  a standalone instance:
 <td><strong>Number of EIP on PKT 1</strong></td>
 <td><p>The number of Elastic IPs to be associated with PKT 1 interface.</p>
 <p><strong>Note</strong>: Default is 0</p></td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -201,7 +201,7 @@ To instantiate  a standalone instance:
 <td><strong>PlacementId</strong></td>
 <td>A placement group ID of logical group of instances within a single Availability Zone. This is an optional field and can be blank.</td>
 <td>  </td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 </tr>
 <tr class="even">
@@ -209,7 +209,7 @@ To instantiate  a standalone instance:
 <td><strong>ReveseNatEnablePkt0</strong></td>
 <td><p>Enable or disable reverse Network Address Translation (NAT) functionality for PKT0 interface. Set this field to true, to attach the assigned EIP on PKT0 and use it without SMM rule. See  EipAssociationXface  for associating EIP for the required interfaces.</p>
 <p><strong>Note:</strong>  When set to False, the SBC application cannot use the attached EIP.</p></td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -218,7 +218,7 @@ To instantiate  a standalone instance:
 <td><strong>ReveseNatEnablePkt1</strong></td>
 <td><p>Enable or disable reverse Network Address Translation (NAT) functionality for PKT1 interface. Set this field to true, to attach the assigned EIP on PKT1 and use it without SMM rule.  See  EipAssociationXface      for associating EIP for the required interfaces.</p>
 <p><strong>Note:</strong>  When set to False, the SBC application cannot use the attached EIP.</p></td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -226,7 +226,7 @@ To instantiate  a standalone instance:
 <td>System configuration</td>
 <td><strong>SBCPersonality</strong></td>
 <td>The type of SBC for this deployment. In this release the personality should always be set to <strong>isbc</strong>.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td></td>
 <td></td>
 </tr>
@@ -234,7 +234,7 @@ To instantiate  a standalone instance:
 <td>Network configuration</td>
 <td><strong>SecurityGrpHa0</strong></td>
 <td>Acts as a firewall for associated Amazon EC2 instances, controlling both inbound and outbound traffic for HA0.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -242,7 +242,7 @@ To instantiate  a standalone instance:
 <td>Network configuration</td>
 <td><strong>SecurityGrpMgt0</strong></td>
 <td>Acts as a firewall for associated Amazon EC2 instances, controlling both inbound and outbound traffic for MGT0.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -250,7 +250,7 @@ To instantiate  a standalone instance:
 <td>Network configuration</td>
 <td><strong>SecurityGrpPkt0</strong></td>
 <td>Acts as a firewall for associated Amazon EC2 instances, controlling both inbound and outbound traffic for PKT0.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -258,7 +258,7 @@ To instantiate  a standalone instance:
 <td>Network configuration</td>
 <td><strong>SecurityGrpPkt1</strong></td>
 <td>Acts as a firewall for associated Amazon EC2 instances, controlling both inbound and outbound traffic for PKT1.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -266,7 +266,7 @@ To instantiate  a standalone instance:
 <td>Network configuration</td>
 <td><strong>SubnetIdHA0</strong></td>
 <td>Subnet ID of an existing subnet in your Virtual Private Cloud (VPC) for HA0.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -274,7 +274,7 @@ To instantiate  a standalone instance:
 <td>Network configuration</td>
 <td><strong>SubnetIdMgt0</strong></td>
 <td>Subnet ID of an existing subnet in your Virtual Private Cloud (VPC) for Mgt0.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -282,7 +282,7 @@ To instantiate  a standalone instance:
 <td>Network configuration</td>
 <td><strong>SubnetIdPkt0</strong></td>
 <td>SubnetId of an existing subnet in your Virtual Private Cloud (VPC) for Pkt0.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -290,7 +290,7 @@ To instantiate  a standalone instance:
 <td>Network configuration</td>
 <td><strong>SubnetIdPkt1</strong></td>
 <td>SubnetId of an existing subnet in your Virtual Private Cloud (VPC) for Pkt1.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -310,7 +310,7 @@ To instantiate  a standalone instance:
 <p>Cannot exceed 26 characters in length.</p>
 </blockquote></li>
 </ul></td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -318,15 +318,15 @@ To instantiate  a standalone instance:
 <td>Storage configuration</td>
 <td><strong>Volume Size</strong></td>
 <td>Enter size of disk required in GB. The minimum size is 65 GIB, however more can be chosen.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" />  </td>
+<td><strong>  X  </strong>  </td>
 </tr>
 <tr class="odd">
 <td>Placement of Instance</td>
 <td><strong>Tenancy</strong></td>
 <td>The Tenancy Attribute for this instance.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -334,7 +334,7 @@ To instantiate  a standalone instance:
 <td>Storage configuration</td>
 <td><strong>Volume Type</strong></td>
 <td>Select the type of volume for SBC. It is recommended that SBC use io1 type.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -342,7 +342,7 @@ To instantiate  a standalone instance:
 <td>Network configuration</td>
 <td><strong>VpcId</strong></td>
 <td>Select a VPC with Subnet, Security Group, etc., selected earlier.</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
@@ -350,17 +350,17 @@ To instantiate  a standalone instance:
 <td>Third Party Applications Provisioning</td>
 <td><strong>Third Party CPUs</strong></td>
 <td>Enter number of CPUs to be reserved for use with third party apps. <strong>Note</strong>: Default is 0</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" />  </td>
+<td><strong>  X  </strong>  </td>
 </tr>
 <tr class="odd">
 <td>Third Party Applications Provisioning</td>
 <td><strong>Third Party Memory</strong></td>
 <td>Enter number of MB of memory to be reserved for use with third party apps.   <strong>Note</strong>: Default is 0</td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" /></td>
+<td><strong>  X  </strong></td>
 <td>  </td>
-<td><embed src="media/image1.tmp" style="width:0.16667in;height:0.16667in" />  </td>
+<td><strong>  X  </strong>  </td>
 </tr>
 </tbody>
 </table>
