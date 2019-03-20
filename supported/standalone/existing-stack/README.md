@@ -483,7 +483,7 @@ to <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html
 The policy details are shown below.
 
 Attach this policy to a new IAM role. You must enter this IAM role in
-the template(**IAMRoleHFE:IAM rol**)for HFE instances.
+the template (**IAMRoleHFE:IAM role**)for HFE instances.
 
  >  
  >  
