@@ -1,4 +1,12 @@
-# Ribbon SBC Standalone AWS Instantiation from Cloud Formation Template 
+# Deploying Ribbon SBC Standalone AWS Instantiation with BYOL Licensing
+
+## Introduction ##
+
+This solution uses a CloudFormation Template to launch a single Ribbon SBC VE in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing.
+
+This is an existing stack template, meaning the networking infrastructure MUST be available prior to deploying. See the Template Parameters Section for required networking objects. See the production stack directory for additional deployment options.
+
+For information on getting started using Ribbon SBC CFT templates on GitHub, see (**Amazon Web Services: Solutions 101** <http://clouddocs.f5.com/cloud/public/v1/aws/AWS_solutions101.html>).
 
 ## Pre-requisites for AWS CFN Install of SBC Standalone Instance  
 
