@@ -221,7 +221,7 @@ destined for a target within the VPC (10.0.0.0/16) is covered by the
 Local route, and therefore, routed within the VPC. All other traffic
 from the subnet uses the internet gateway.
 
-**Table:**Route Table
+**Table:** Route Table
 
 | **Destination** | **Target**   |
 | --------------- | ------------ |
@@ -302,8 +302,7 @@ subnets.
 
 #### Management Security Group
 
-**Table:**Configuring Security Group for Management
-Subnet
+**Table:** Configuring Security Group for Management Subnet
 
 | **Type**        | **Protocol** | **Port Range** | **Source** | **Notes/Purpose**                                                 |
 | --------------- | ------------ | -------------- | ---------- | ----------------------------------------------------------------- |
@@ -326,8 +325,7 @@ Subnet
 
 #### HA Security Group
 
-**Table:**Configuring Security Group for HA
-Subnet
+**Table:** Configuring Security Group for HA Subnet
 
 | **Type**    | **Protocol** | **Port Range** | **Source** | **Notes/Purpose**                |
 | ----------- | ------------ | -------------- | ---------- | -------------------------------- |
@@ -337,7 +335,7 @@ Subnet
 
 #### Packet Security Group
 
-**Table:**Configuring Security Group for Packet Ports PKT0 and PKT1
+**Table:** Configuring Security Group for Packet Ports PKT0 and PKT1
 
 | **Type**        | **Protocol** | **Port Range** | **Source** |
 | --------------- | ------------ | -------------- | ---------- |
@@ -353,8 +351,7 @@ High-availability Forwarding Engine is present in the configuration.
 
 ### HA Forwarding Node Security Groups
 
-**Table:**Configuring a Security Group for the
-Public-facing/Management Port (eth1)
+**Table:** Configuring a Security Group for the Public-facing/Management Port (eth1)
 
 | **Type**        | **Protocol** | **Port Range** | **Source** |
 | --------------- | ------------ | -------------- | ---------- |
@@ -362,8 +359,7 @@ Public-facing/Management Port (eth1)
 | Custom TCP rule | TCP          | 5061           | x.x.x.x/y  |
 | Custom UDP rule | UDP          | 1024-65535     | x.x.x.x/y  |
 
-**Table:**.Configuring a Security Group for the Private-facing Port
-(eth2)
+**Table:** Configuring a Security Group for the Private-facing Port (eth2)
 
 | **Type**        | **Protocol** | **Port Range** | **Source**                                                                       |
 | --------------- | ------------ | -------------- | -------------------------------------------------------------------------------- |
@@ -380,7 +376,7 @@ The source ranges for the HFE Private-facing Port security group may be the priv
 It is recommended to open allports using Outbound/Egress rules in the
 security groups associated withmanagement, HA and packet interfaces.
 
-**Table:**Outbound Security Group Rules
+**Table:** Outbound Security Group Rules
 
 | **Type**   | **Protocol** | **Port Range** | **Destination** |
 | ----------- | ------------ | -------------- | --------------- |
