@@ -53,7 +53,9 @@ As of release 7.2S405, only following Instance types are supported for deploymen
   
 ## Instantiating a standalone SBC Instance
 
-To instantiate  a standalone instance:
+The easiest way to deploy this CloudFormation template is to use the Launch Stack button.
+
+To manually instantiate  a standalone instance:
 
 1.  Log onto AWS.
 
@@ -83,9 +85,31 @@ To instantiate  a standalone instance:
 8.  In the **Stack name** field enter a  unique name  for this SBC stack.
     A stack is a collection of AWS resources you create and delete as a single unit.
 
-9.  Enter the required values for the Parameter fields. The following
-    table describes the create stack parameters:  
-    **Table**  :  Create Stack Parameters
+9.  Enter the required values for the Parameter fields. The following [table](#template-parameters) describes the create stack parameters
+
+10. Click **Next**.  
+    The  **Options**  page displays.
+
+11. Optionally you can choose to Tag your deployment with a Key-value
+    pair, IAM Role Permissions, Rollback Triggers or other advanced
+    Options.
+
+12. Click **Next**.  
+    The **Review** page displays.  
+      
+
+13. Review the stack details and click **Create**  
+    The **CloudFormation Stacks** page is displayed.
+
+> On successful stack creation the stack will be listed.
+
+>  - Do not update or modify the stack after creation.
+
+>  - Do not change or remove resources after instance creation. For example, removing or attaching EIP, or changing the user data and so on.
+  
+## Template Parameters  
+  
+  **Table**  :  Create Stack Parameters
 
 > Note
 > 
@@ -387,25 +411,7 @@ To instantiate  a standalone instance:
 </tbody>
 </table>
 
-10. Click **Next**.  
-    The  **Options**  page displays.
 
-11. Optionally you can choose to Tag your deployment with a Key-value
-    pair, IAM Role Permissions, Rollback Triggers or other advanced
-    Options.
-
-12. Click **Next**.  
-    The **Review** page displays.  
-      
-
-13. Review the stack details and click **Create**  
-    The **CloudFormation Stacks** page is displayed.
-
-> On successful stack creation the stack will be listed.
-
->  - Do not update or modify the stack after creation.
-
->  - Do not change or remove resources after instance creation. For example, removing or attaching EIP, or changing the user data and so on.
 
   
 
