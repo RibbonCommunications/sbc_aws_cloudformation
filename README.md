@@ -43,7 +43,7 @@ Or you can use the Launch Stack button to get started:
 
 **All Ribbon SBC Supported templates for AWS**
 
-To see a list of all of our supported AWS CloudFormation templates, see the **[AWS SBC Supported Template index**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/template-index.md).
+To see a list of all of our supported AWS CloudFormation templates, see the [**AWS SBC Supported Template index**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/template-index.md).
 
 **Copyright**
 
