@@ -3,6 +3,7 @@
 **Contents**
 - [Introduction](#Introduction)
 - [Pre-requisites for AWS CFN Install of SBC Standalone Instance](#pre-requisites-for-aws-cfn-install-of-sbc-standalone-instance- )
+- [Supported Instance types](#supported-instance-types )
 - [Instantiating a standalone SBC Instance](#instantiating-a-standalone-sbc-instance)
 
 ## Introduction ##
@@ -37,6 +38,19 @@ Prior to initiating a CFN-based install of a standalone SBC instance perform the
 >
 >  See [Ribbon SBC AWS SBC Instantiate Pre-Requisites](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#ribbon-sbc-aws-sbc-instantiate-pre-requisites) for more details about all pre-requisites.
 
+## Supported Instance Types
+
+As of release 7.2S405, only following Instance types are supported for deployment in AWS:
+  - m5.xlarge
+  - m5.2xlarge
+  - c5.2xlarge
+  - c5.4xlarge
+  - c5.9xlarge
+  - c5n.2xlarge
+  - c5n.4xlarge
+  - c5n.9xlarge
+  - p3.2xlarge
+  
 ## Instantiating a standalone SBC Instance
 
 To instantiate  a standalone instance:
