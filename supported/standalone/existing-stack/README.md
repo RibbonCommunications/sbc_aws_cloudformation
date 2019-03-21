@@ -28,7 +28,9 @@ Prior to initiating a CFN-based install of a standalone SBC instance perform the
 
 8.  Create a Policy and Role for the SBC instance - see [Creating Identity and Access Management -IAM- Role for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-identity-and-access-management--iam--role-for-SBC )
 
-See [Ribbon SBC AWS SBC Instantiate Pre-Requisites](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#ribbon-sbc-aws-sbc-instantiate-pre-requisites)
+>  **NOTE** 
+>
+>  See [Ribbon SBC AWS SBC Instantiate Pre-Requisites](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#ribbon-sbc-aws-sbc-instantiate-pre-requisites)
 
 ## Instantiating a standalone SBC Instance
 
