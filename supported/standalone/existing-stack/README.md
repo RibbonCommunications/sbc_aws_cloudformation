@@ -6,6 +6,9 @@
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating a standalone SBC Instance](#instantiating-a-standalone-sbc-instance)
 - [Template parameters](#template-parameters)
+- [Configuration Example](#configuration-example)
+- [More documentation](#more-documentation)
+- [Getting Help](#support-information)
 
 ## Introduction ##
 
@@ -55,6 +58,7 @@ As of release 7.2S405, only following Instance types are supported for deploymen
 ## Instantiating a standalone SBC Instance
 
 The easiest way to deploy this CloudFormation template is to use the Launch Stack button.
+https://camo.githubusercontent.com/210bb3bfeebe0dd2b4db57ef83837273e1a51891/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f636c6f7564666f726d6174696f6e2d6578616d706c65732f636c6f7564666f726d6174696f6e2d6c61756e63682d737461636b2e706e67
 
 To manually instantiate  a standalone instance:
 
@@ -432,4 +436,20 @@ Perform the following steps to view the SBC SWe instances created:
     The instances table lists the  new instance.
 
 > If you delete an instance from CFN, be aware that AWS does not delete volume(s) automatically. You must also delete them from the AWS UI if you do not want volumes of deleted instances (standalone, HA or HFN-based SBC installation).
+
+## Configuration Example
+
+The following is a simple configuration diagram for this Ribbon SBC standalone deployment.
+
+## More documentation
+
+For more information on Ribbon SBC solutions, including manual configuration instructions for SBC features, see the Ribbon SBC documentation suite here: https://support.sonus.net/display/SBXDOC72 .
+
+## Support Information
+
+Support for BYOL products with valid licenses is provided through the Ribbon Support Portal ( https://ribboncommunications.com/services/ribbon-support-portal-login )
+
+## Copyright
+
+Copyright 2019 Ribbon Communications LLC
 
