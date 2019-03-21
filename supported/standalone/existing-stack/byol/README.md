@@ -1,4 +1,4 @@
-# Deploying Ribbon SBC Standalone AWS Instantiation with BYOL Licensing
+# Deploying Ribbon SBC Standalone in AWS with BYOL Licensing
 
 **Contents**
 - [Introduction](#Introduction)
