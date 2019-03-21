@@ -6,7 +6,7 @@ Click the links to view the README files which include the Launch buttons and ad
 
 **Important:** You may have to select the AWS region in which you want to deploy after clicking the Launch Stack button 
 
-[**Standalone SBC**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone/existing-stack)
+[**Standalone SBC**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone/existing-stack/byol)
 - Existing Stack which includes single SBC instance but provides no application redundancy (typical)
    o	BYOL (bring your own license)
      
