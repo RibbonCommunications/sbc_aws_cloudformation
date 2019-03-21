@@ -57,7 +57,7 @@ the <span class="underline">Quick Start README file</span>
 
 Or you can use the Launch Stack button to get
 started:  
-![https://camo.githubusercontent.com/210bb3bfeebe0dd2b4db57ef83837273e1a51891/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f636c6f7564666f726d6174696f6e2d6578616d706c65732f636c6f7564666f726d6174696f6e2d6c61756e63682d737461636b2e706e67](media/image1.png)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/byol/AWS_Stand_Alone_template.json)
 
 **All Ribbon SBC Supported templates for AWS**
 
