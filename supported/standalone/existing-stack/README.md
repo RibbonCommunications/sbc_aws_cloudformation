@@ -112,6 +112,22 @@ To manually instantiate  a standalone instance:
 
 >  - Do not change or remove resources after instance creation. For example, removing or attaching EIP, or changing the user data and so on.
   
+## Verify the Instance Creation
+
+Perform the following steps to view the SBC SWe instances created:
+
+1.  Click the  **Services**  drop-down list.  
+    The  **Services**  list is displayed.
+
+2.  From the left pane click  **EC2**.
+
+> The  **EC2 Dashboard**  page is displayed.  
+>   
+
+3.  From the left pane under  **Instances**  click  **Instances**.  
+    The instances table lists the  new instance.
+
+> If you delete an instance from CFN, be aware that AWS does not delete volume(s) automatically. You must also delete them from the AWS UI if you do not want volumes of deleted instances (standalone, HA or HFN-based SBC installation).  
 ## Template Parameters  
   
   **Table**  :  Create Stack Parameters
@@ -416,32 +432,15 @@ To manually instantiate  a standalone instance:
 </tbody>
 </table>
 
-
-
   
 
-## Verify the Instance Creation
 
-Perform the following steps to view the SBC SWe instances created:
-
-1.  Click the  **Services**  drop-down list.  
-    The  **Services**  list is displayed.
-
-2.  From the left pane click  **EC2**.
-
-> The  **EC2 Dashboard**  page is displayed.  
->   
-
-3.  From the left pane under  **Instances**  click  **Instances**.  
-    The instances table lists the  new instance.
-
-> If you delete an instance from CFN, be aware that AWS does not delete volume(s) automatically. You must also delete them from the AWS UI if you do not want volumes of deleted instances (standalone, HA or HFN-based SBC installation).
 
 ## Configuration Example
 
 The following is a simple configuration diagram for this Ribbon SBC standalone deployment.
-<p align="center"><image src="https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/images/RBBN-SBC-SA.png" width=800 title="Ribbon SBC standalone">
-</p>
+<p align="center">
+<image src="https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/images/RBBN-SBC-SA.png" width=800 title="Ribbon SBC standalone"></p>
 
 ## More documentation
 
