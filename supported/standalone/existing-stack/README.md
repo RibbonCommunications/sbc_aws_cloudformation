@@ -10,31 +10,25 @@ For information on getting started using Ribbon SBC CFT templates on GitHub, see
 
 ## Pre-requisites for AWS CFN Install of SBC Standalone Instance  
 
-Prior to initiating a CFN-based install of a standalone SBC instance
-perform the following:
+Prior to initiating a CFN-based install of a standalone SBC instance perform the following:
 
-1.  Create a VPC for use in the deployment - see    Creating VPC for SBC
+1.  Create a VPC for use in the deployment - see [Creating VPC for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-vpc-for-sbc )
 
-2.  Create  Internet  Gateway for use in the deployment - see    Creating Internet Gateway for SBC
+2.  Create  Internet  Gateway for use in the deployment - see[Creating Internet Gateway for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-internet-gateway-for-sbc )
 
-3.  Create Key Pairs for Linux shell access and Administrator access -
-    see Creating Key Pairs for SBC
+3.  Create Key Pairs for Linux shell access and Administrator access - see [Creating Key Pairs for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-key-pairs-for-sbc )
 
-4.  Create Subnets for use in the deployment - see Creating Subnets for SBC
+4.  Create Subnets for use in the deployment - see [Creating Subnets for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/d#creating-subnets-for-sbc)
 
-5.  Create Security Groups for use in the deployment - see    Creating
-    Security Groups for SBC
+5.  Create Security Groups for use in the deployment - see [Creating Security Groups for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-security-groups-for-sbc)
 
-6.  Update or create Route tables for the newly created subnets -
-    see  Creating Route Tables for SBC
+6.  Update or create Route tables for the newly created subnets - see [Creating Route Tables for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-route-tables-for-sbc)
 
-7.  Create a placement group for the SBC deployment - see  Creating
-    Placement Groups
+7.  Create a placement group for the SBC deployment - see [Creating Placement Groups](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-placement-groups )
 
-8.  Create a Policy and Role for the SBC instance - see  Creating
-    Identity and Access Management -IAM- Role for SBC
+8.  Create a Policy and Role for the SBC instance - see [Creating Identity and Access Management -IAM- Role for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-identity-and-access-management--iam--role-for-SBC )
 
-  
+See [Ribbon SBC AWS SBC Instantiate Pre-Requisites](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#ribbon-sbc-aws-sbc-instantiate-pre-requisites)
 
 ## Instantiating a standalone SBC Instance
 
