@@ -2,17 +2,17 @@
 
 Prior to deploying an SBC, the following activities should be completed. See sections below for details.
 
-  - Creating Placement Groups
-  - Creating VPC for SBC
-  - Creating Internet Gateway for SBC
-  - Creating Subnets for SBC
-  - Creating Route Tables for SBC
-  - Creating Security Groups for SBC
-  - Creating Key Pairs for SBC
-  - Creating Identity and Access Management -IAM- Role for SBC
-  - Creating Identity and Access Management -IAM- Role for HFE
-  - Upload HFE.sh script to S3
-  - Finding Amazon Linux 2 AMI ID for use in HFE deployments
+  - [Creating Placement Groups](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-placement-groups)
+  - [Creating VPC for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-vpc-for-sbc)
+  - [Creating Internet Gateway for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-internet-gateway-for-sbc )
+  - [Creating Subnets for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-subnets-for-sbc )
+  - [Creating Route Tables for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-route-tables-for-sbc)
+  - [Creating Security Groups for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-security-groups-for-sbc)
+  - [Creating Key Pairs for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-key-pairs-for-sbc )
+  - [Creating Identity and Access Management -IAM- Role for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-identity-and-access-management--iam--role-for-SBC )
+  - [Creating Identity and Access Management -IAM- Role for HFE](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-identity-and-access-management--iam--role-for-hfe )
+  - [Upload HFE.sh script to S3](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#upload-hfesh-script-to-s3 )
+  - [Finding Amazon Linux 2 AMI ID for use in HFE deployments](#finding-amazon-linux-2-ami-id-for-use-in-hfe-deployments)
 
 >**Note
 >
@@ -101,7 +101,7 @@ The suggested size of the VPC is CIDR x.x.x.x/16, where each subnet has a CIDR o
 6.  Click on **Create**.  
     On success, the new VPC ID will be shared on a new window.
 
-For further information about creating VPCs see [**here**](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html ) 
+For further information about creating VPCs see [**VPC getting started**](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html ) 
 
 # Creating Internet Gateway for SBC
 
@@ -403,6 +403,129 @@ To create a key pair, perform the following steps:
 7.  Repeat the steps above for the "admin" user.
 
 For more information about key pairs refer to: [**ec2-keypairs**](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-key-pairs.html ) 
+
+# Creating Identity and Access Management -IAM- Role for SBC
+
+AWS Identity and Access Management (IAM) is a web service that helps to securely control user access to AWS resources through authentication and authorization. For more information on IAM, refer to  [Using IAM](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UsingIAM.html).
+
+An IAM role to launch SBC HA instance in AWS is required. Only 1 role
+need be created per account.
+
+The IAM role must be associated with a policy that defines at minimum
+the following permissions:    
+
+  
+
+>  "Statement": \[
+>  
+>  {
+>  
+>  "Effect": "Allow",
+>  
+>  "Action": \[
+>  
+>  "ec2:AllocateAddress",
+>  
+>  "ec2:AssignPrivateIpAddresses",
+>  
+>  "ec2:AssociateAddress",
+>  
+>  "ec2:AttachNetworkInterface",
+>  
+>  "ec2:DisassociateAddress",
+>  
+>  "ec2:DescribeInstances",
+>  
+>  "ec2:DescribeNetworkInterfaces"
+>  
+>  \],
+>  
+>  "Resource": "\*"
+>  
+>  }
+>  
+>  \]
+
+  
+
+To create a Policy and associate it to a Role for SBC follow these steps:
+
+1.  Navigate to [**IAM**    Dashboard](https://console.aws.amazon.com/iam/home).
+
+2.  Select **Policies** from the left panel.  
+    The **Policies  **page displays.
+
+3.  Click **Create policy**  
+    The  Policies  page displays.
+
+4.  Click on the JSON tab.  
+    The JSON editor panel appears.
+
+5.  Update the policy statement to include the content below
+
+> "Statement": \[
+> 
+> {
+> 
+> "Effect": "Allow",
+> 
+> "Action": \[
+> 
+> "ec2:AllocateAddress",
+> 
+> "ec2:AssignPrivateIpAddresses",
+> 
+> "ec2:AssociateAddress",
+> 
+> "ec2:AttachNetworkInterface",
+> 
+> "ec2:DisassociateAddress",
+> 
+> "ec2:DescribeInstances",
+> 
+> "ec2:DescribeNetworkInterfaces"
+> 
+> \],
+> 
+> "Resource": "\*"
+> 
+> }
+> 
+> \]
+
+6.  Click on Review Policy.
+
+7.  Enter a name for the policy and a description, then click on Create policy.    
+    Create Policy window
+
+8.  The user will get an indication tha the policy was created and will be returned to the create policy window "Create Policy Successful".
+
+9.  Click on Roles.  
+    The Roles window will appear.
+
+10. Click on Create role.  
+    The Create role window will appear
+
+11. Select **EC2** as the service that will use this role, then click on **Next: Permissions**
+
+12. The Attach permissions policies window will appear.
+
+13. In the search window next to **Filter policies**, type the name of the policy you just created, then select it from the list.
+
+14. Click on **Next: tags.**  
+    The Add tags window appears.
+
+15. If desired, enter a tag. Click on **Next: Review**  
+    The Create Role Review page is displayed.
+
+16. Enter a **Role name** and then click **Create role**.
+
+17. The user will be returned to the Create role window.  
+
+18. You can verify that your role was created by typing the name of the created role in the search area.
+
+
+For more information on creating and using IAM roles and policies, refer to  AWS online documentation at [IAM Roles](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html)  and  [IAM Policies](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-for-amazon-ec2.html).
 
 # Creating Identity and Access Management -IAM- Role for HFE
 
