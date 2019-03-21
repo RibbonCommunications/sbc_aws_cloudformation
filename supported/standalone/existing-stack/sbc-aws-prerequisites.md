@@ -86,7 +86,7 @@ The suggested size of the VPC is CIDR x.x.x.x/16, where each subnet has a CIDR o
 
 ## To create a new VPC
 
-1.  Navigate to the [**VPC Dashboard**]<https://console.aws.amazon.com/vpc/ > 
+1.  Navigate to the [**VPC Dashboard**](https://console.aws.amazon.com/vpc/ ) 
 
 2.  Click on **Your VPCs** on the panel at left  
     The Create VPC window appears.
@@ -101,7 +101,7 @@ The suggested size of the VPC is CIDR x.x.x.x/16, where each subnet has a CIDR o
 6.  Click on **Create**.  
     On success, the new VPC ID will be shared on a new window.
 
-For further information about creating VPCs see [**here**]<https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html > 
+For further information about creating VPCs see [**here**](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html ) 
 
 # Creating Internet Gateway for SBC
 
@@ -111,7 +111,7 @@ Each SBC deployment requires access to the internet for management and potential
 
 To create an Internet Gateway perform the following steps:
 
-1.  Navigate to the [**VPC Dashboard**]<https://console.aws.amazon.com/vpc/ > 
+1.  Navigate to the [**VPC Dashboard**](https://console.aws.amazon.com/vpc/ ) 
 
 2.  Click on **Internet Gateways** on the panel at left.  
     The Create internet gateway window appears.
@@ -137,7 +137,7 @@ To create an Internet Gateway perform the following steps:
 
 
 
-For more information concerning internet gateways see [**VPC Internet Gateway**]<https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html > 
+For more information concerning internet gateways see [**VPC Internet Gateway**](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html ) 
 
 # Creating Subnets for SBC
 
@@ -160,7 +160,7 @@ These subnets can be created within an existing VPC or a new VPC can be allocate
 
 To create a new subnet with CIDR x.x.x.x/20 within an existing VPC:
 
-1.  Navigate to the [**VPC Dashboard**]<https://console.aws.amazon.com/vpc/ > 
+1.  Navigate to the [**VPC Dashboard**](https://console.aws.amazon.com/vpc/ ) 
 
 2.  Select **Your VPCs** on the taskbar at left to see the list of VPCs available
 
@@ -176,13 +176,13 @@ To create a new subnet with CIDR x.x.x.x/20 within an existing VPC:
 
 8.  IF a High-Availability Forwarded Engine instance is to be deployed with the SBC, a public-facting subnet must be used. An existing    public-facing subnet can be re-used. If not available, click on **Create subnet** to create a subnet for HFE Public-facing using an    IPv4 CIDR block, e.g. x.x.64.0/20
 
-For more information on creating subnets in AWS, refer to [**Add a Subnet**]<https://docs.aws.amazon.com/vpc/latest/userguide/working-with-vpcs.html#AddaSubnet > 
+For more information on creating subnets in AWS, refer to [**Add a Subnet**](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-vpcs.html#AddaSubnet ) 
 
 # Creating Route Tables for SBC
 
 In order for your new Subnets to have routing outside the VPC, you must ensure the new subnets created have appropriate inbound and outbound routes in a route table. You can choose to update the master route table (which is implicitly assigned to your new subnets - or you can define a new route table and explicitly associate it with your subnets.
-In this example we will create an explicit route table and assign the
-MGT, PKT0, PKT1 and HFE(if required) subnets to it. Note that you could create separate route tables for each of the MGT, PKT0, PKT1 and HFE subnets if desired.
+
+In this example we will create an explicit route table and assign the MGT, PKT0, PKT1 and HFE(if required) subnets to it. Note that you could create separate route tables for each of the MGT, PKT0, PKT1 and HFE subnets if desired.
 
 AWS uses the most specific route in your route table that matches the traffic to determine how to route the traffic (longest prefix match). You need to have the rule to route all the non-Virtual Private Clouds (VPC) traffic to internet gateway or ensure that the internet traffic is routed through your own NAT instance or Gateway. If you cannot provide a way to send out the SBC API query to the internet, the HA solution fails (SBC) in AWS.
 
@@ -199,11 +199,11 @@ For example, the following route table has a route for IPv4 Internet traffic 0.0
 
 
 
-For detailed information on the Route Table, refer to [**VPC Route Tables**]<https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html > 
+For detailed information on the Route Table, refer to [**VPC Route Tables**](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html ) 
 
 ## To create a Route table for MGT0, PKT0, PKT1, HFE
 
-1.  Navigate to the [**VPC Dashboard**]<https://console.aws.amazon.com/vpc/ > 
+1.  Navigate to the [**VPC Dashboard**](https://console.aws.amazon.com/vpc/ ) 
 
 2.  Select **Route Tables** on the taskbar at left to see the list of route tables available
 
@@ -371,7 +371,7 @@ It is recommended to open allports using Outbound/Egress rules in the security g
 
 9.  If deploying with a High-availability Forwarding Engine option, repeat steps **3** through **7** to create a new security group for the HFE public- and private-facing subnets.
 
- >  For more information, refer to [**VPC Security Groups**]<https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html > 
+ >  For more information, refer to [**VPC Security Groups**](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html ) 
 
 # Creating Key Pairs for SBC
 
@@ -402,14 +402,14 @@ To create a key pair, perform the following steps:
 
 7.  Repeat the steps above for the "admin" user.
 
-For more information about key pairs refer to: [**ec2-keypairs**]<https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-key-pairs.html > 
+For more information about key pairs refer to: [**ec2-keypairs**](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-key-pairs.html ) 
 
 # Creating Identity and Access Management -IAM- Role for HFE
 
-AWS Identity and Access Management (IAM) is a web service that helps to securely control user access to AWS resources through authentication and authorization. For more information on IAM, refer to [**UsingIAM**]<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UsingIAM.html > .
+AWS Identity and Access Management (IAM) is a web service that helps to securely control user access to AWS resources through authentication and authorization. For more information on IAM, refer to [**UsingIAM**](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UsingIAM.html ) .
 
 
-Create a policy for the HFE node using the JSON method (refer to [**create access policies**]<https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html > ).
+Create a policy for the HFE node using the JSON method (refer to [**create access policies**](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html ) ).
 The policy details are shown below.
 
 Attach this policy to a new IAM role. You must enter this IAM role in the template (**IAMRoleHFE:IAM role**)for HFE instances.
@@ -444,8 +444,7 @@ Attach this policy to a new IAM role. You must enter this IAM role in the templa
 To create a Policy and associate it to a Role for SBC follow these
 steps:
 
-1.  Navigate to **IAM**
-    Dashboard: <https://console.aws.amazon.com/iam/home > 
+1.  Navigate to [**IAM** Dashboard]((https://console.aws.amazon.com/iam/home ) 
 
 2.  Select **Policies** from the left panel.  
     The **Policies** page displays.
@@ -453,7 +452,7 @@ steps:
 3.  Click **Create policy**  
     ThePolicies page displays.
 
-4.  Click on the JSON tab.  
+4.  Click on the **JSON** tab.  
     The JSON editor panel appears.
 
 5.  Update the policy to include the content below
@@ -492,21 +491,21 @@ steps:
  >  
  >  }
 
-6.  Click on Review Policy.
+6.  Click on **Review Policy**.
 
-7.  Enter a name for the policy and a description, then click on Create policy.  
+7.  Enter a name for the policy and a description, then click on **Create policy**.  
 
 8.  The user will get an indication that the policy was created and will be returned to the create policy window  
 
-9.  Click on Roles.  
+9.  Click on **Roles**.  
     The Roles window will appear.
 
-10. Click on Create role.  
+10. Click on **Create role**.  
     The Create role window will appear
 
 11. Select **EC2** as the service that will use this role, then click on **Next: Permissions**
 
-12. The Attach permissions policies window will appear.
+12. The **Attach permissions** policies window will appear.
 
 13. In the search window next to **Filter policies**, type the name of the policy you just created, then select it from the list.
 
@@ -518,7 +517,7 @@ steps:
 
 16. Enter a **Role name** and then click **Create role**.
 
-17. The user will be returned to the Create role window.
+17. The user will be returned to the **Create role** window.
 
 18. You can verify that your role was created by typing the name of the created role in the search area.
 
