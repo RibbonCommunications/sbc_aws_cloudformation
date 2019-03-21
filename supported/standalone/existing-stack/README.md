@@ -47,11 +47,10 @@ To instantiate  a standalone instance:
     The  **Services**  list is displayed.
 
 3.  Click  **CloudFormation**  from Management Tools section.  
-      The stacks page displays.
+    The stacks page displays.
 
 4.  Click  **Create Stack**.
-
-> The  **Select Template**  page displays.
+    The  **Select Template**  page displays.
 
 5.  In the  **Choose a template**  section, select  **Upload a template to Amazon S3**.
 
