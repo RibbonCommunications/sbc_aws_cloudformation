@@ -7,7 +7,8 @@ The following is a list of the current supported SBC CloudFormation templates. S
 **Standalone SBC**
 - Existing Stack which includes single SBC instance but provides no application redundancy (typical)
    o	BYOL (bring your own license)
-      [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/byol/AWS_Stand_Alone_template.json)
+     
+     [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/byol/AWS_Stand_Alone_template.json)
  
 **High-Availability SBC**
 - Existing Stack which includes active and standby instances with application redundancy (typical)
