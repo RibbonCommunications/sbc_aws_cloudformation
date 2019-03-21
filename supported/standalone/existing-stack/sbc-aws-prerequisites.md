@@ -14,7 +14,8 @@ Prior to deploying an SBC, the following activities should be completed. See sec
   - Upload HFE.sh script to S3
   - Finding Amazon Linux 2 AMI ID for use in HFE deployments
 
->**Note**
+>**Note
+>
 >Ribbon recommends m5.xlarge or higher instance type if this instance type is available in your zone. Use c5.2xlarge instance type or higher to handle more calls with transcoding.
 >
 >As of release 7.2S405, only following Instance types are supported for deployment in AWS:
@@ -29,11 +30,12 @@ Prior to deploying an SBC, the following activities should be completed. See sec
 >  - c5n.9xlarge
 >  - p3.2xlarge
 >
->Any prior release deployments using C3, C4 or M4 instance types will need to be migrated to the newer instance types.
+>Any prior release deployments using C3, C4 or M4 instance types will need to be migrated to the newer instance types.**
 
 # Creating Placement Groups
 
 >**Note**
+>
 >Use of Placement Groups is optional and not required.
 
 If using a Placement group, it is recommended to use a cluster placement group so all resources are within the same AZ to maximize performance.
@@ -334,12 +336,15 @@ It is recommended to open allports using Outbound/Egress rules in the security g
 
 
 >**Caution**
+>
 >If specific ports are opened in outbound security group rules, the remaining ports are blocked.
 
 >**Note**
+>
 >Refer to the **Management Security Group**,**HA Security Group**, and **Packet Security Group** tables for the minimum required security group rulesfor the SBC to function.
 
 >**Note**
+>
 >Considering that the SIP signaling port in SBC configuration is set to the default port (5060), the port numbers for UDP/TCP are set to 5060 and 5061.
 
 ## Create Security Groups
@@ -357,6 +362,7 @@ It is recommended to open allports using Outbound/Egress rules in the security g
 6.  Click **Add Rule** to create security group rules as suggested above.
 
  >**Note**
+ >
  >  By default, the **Inbound** rules tab is displayed on the screen.
 
 7.  Click **Create**.
@@ -400,9 +406,7 @@ For more information about key pairs refer to: [**ec2-keypairs**]<https://docs.a
 
 # Creating Identity and Access Management -IAM- Role for HFE
 
-AWS Identity and Access Management (IAM) is a web service that helps to securely control user access to AWS resources through authentication and authorization. For more information on IAM, refer to [**UsingIAM**]<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UsingIAM.html > 
-.
-
+AWS Identity and Access Management (IAM) is a web service that helps to securely control user access to AWS resources through authentication and authorization. For more information on IAM, refer to [**UsingIAM**]<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UsingIAM.html > .
 
 
 Create a policy for the HFE node using the JSON method (refer to [**create access policies**]<https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html > ).
@@ -520,9 +524,7 @@ steps:
 
 
 
-For more information on creating and using IAM roles and policies, refer to AWS online documentation at [IAM
-Roles](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) and [IAM
-Policies](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-for-amazon-ec2.html).
+For more information on creating and using IAM roles and policies, refer to AWS online documentation at [IAM Roles](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) and [IAM Policies](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-for-amazon-ec2.html).
 
 # Upload HFE.sh script to S3
 
