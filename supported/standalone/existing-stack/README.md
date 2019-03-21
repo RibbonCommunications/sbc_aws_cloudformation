@@ -3,7 +3,7 @@
 **Contents**
 - [Introduction](#Introduction)
 - [Pre-requisites for AWS CFN Install of SBC Standalone Instance](#pre-requisites-for-aws-cfn-install-of-sbc-standalone-instance- )
-- [Instantiating a standalone SBC Instance] (#instantiating-a-standalone-sbc-instance)
+- [Instantiating a standalone SBC Instance](#instantiating-a-standalone-sbc-instance)
 
 ## Introduction ##
 
@@ -35,7 +35,7 @@ Prior to initiating a CFN-based install of a standalone SBC instance perform the
 
 >  **NOTE** 
 >
->  See [Ribbon SBC AWS SBC Instantiate Pre-Requisites](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#ribbon-sbc-aws-sbc-instantiate-pre-requisites)
+>  See [Ribbon SBC AWS SBC Instantiate Pre-Requisites](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#ribbon-sbc-aws-sbc-instantiate-pre-requisites) for more details about all pre-requisites.
 
 ## Instantiating a standalone SBC Instance
 
