@@ -2,7 +2,7 @@
 
 **Contents**
 - [Introduction](#Introduction)
-- [Pre-requisites for AWS CFN Install of SBC HA Instances](#pre-requisites-for-aws-cfn-install-of-sbc-ha-instances- )
+- [Pre-requisites for AWS CFN Install of SBC HA Instances](#pre-requisites-for-aws-cfn-install-of-sbc-ha-instances )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating an HA SBC](#instantiating-an-ha-sbc)
 - [Template parameters](#template-parameters)
