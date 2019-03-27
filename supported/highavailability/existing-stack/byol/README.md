@@ -24,7 +24,7 @@ Prior to initiating a CFN-based install of HA SBC instances perform the followin
 
 1.  Create a VPC for use in the deployment - see [Creating VPC for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-vpc-for-sbc )
 
-2.  Create  Internet  Gateway for use in the deployment - see[Creating Internet Gateway for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-internet-gateway-for-sbc )
+2.  Create  Internet  Gateway for use in the deployment - see [Creating Internet Gateway for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-internet-gateway-for-sbc )
 
 3.  Create Key Pairs for Linux shell access and Administrator access - see [Creating Key Pairs for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-key-pairs-for-sbc )
 
