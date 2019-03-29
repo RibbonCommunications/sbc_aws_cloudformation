@@ -22,7 +22,7 @@ For information on getting started using Ribbon SBC CFT templates on GitHub, see
 
 Prior to initiating a CFN-based install of a standalone SBC instance perform the following:
 
-1.  Create a VPC for use in the deployment - see [Creating VPC for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-vpc-for-sbc )
+1.  Create a VPC for use in the deployment - see [Creating VPC for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-vpc-for-sbc )
 
 2.  Create  Internet  Gateway for use in the deployment - see[Creating Internet Gateway for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-internet-gateway-for-sbc )
 
