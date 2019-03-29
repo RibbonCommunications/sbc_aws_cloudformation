@@ -53,6 +53,7 @@ As of release 7.2S405, only following Instance types are supported for deploymen
   - c5n.2xlarge
   - c5n.4xlarge
   - c5n.9xlarge
+  - g3.4xlarge
   - p3.2xlarge
   
 ## Instantiating a standalone SBC Instance
