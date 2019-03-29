@@ -22,25 +22,25 @@ For information on getting started using Ribbon SBC CFT templates on GitHub, see
 
 Prior to initiating a CFN-based install of HA SBC instances perform the following:
 
-1.  Create a VPC for use in the deployment - see [Creating VPC for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-vpc-for-sbc )
+1.  Create a VPC for use in the deployment - see [Creating VPC for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-vpc-for-sbc )
 
-2.  Create  Internet  Gateway for use in the deployment - see [Creating Internet Gateway for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-internet-gateway-for-sbc )
+2.  Create  Internet  Gateway for use in the deployment - see [Creating Internet Gateway for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-internet-gateway-for-sbc )
 
-3.  Create Key Pairs for Linux shell access and Administrator access - see [Creating Key Pairs for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-key-pairs-for-sbc )
+3.  Create Key Pairs for Linux shell access and Administrator access - see [Creating Key Pairs for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-key-pairs-for-sbc )
 
-4.  Create Subnets for use in the deployment - see [Creating Subnets for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/d#creating-subnets-for-sbc)
+4.  Create Subnets for use in the deployment - see [Creating Subnets for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-subnets-for-sbc)
 
-5.  Create Security Groups for use in the deployment - see [Creating Security Groups for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-security-groups-for-sbc)
+5.  Create Security Groups for use in the deployment - see [Creating Security Groups for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-security-groups-for-sbc)
 
-6.  Update or create Route tables for the newly created subnets - see [Creating Route Tables for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-route-tables-for-sbc)
+6.  Update or create Route tables for the newly created subnets - see [Creating Route Tables for SBC]( https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-route-tables-for-sbc)
 
-7.  Create a placement group for the SBC deployment - see [Creating Placement Groups](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-placement-groups )
+7.  Create a placement group for the SBC deployment - see [Creating Placement Groups](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-placement-groups )
 
-8.  Create a Policy and Role for the SBC instance - see [Creating Identity and Access Management -IAM- Role for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#creating-identity-and-access-management--iam--role-for-SBC )
+8.  Create a Policy and Role for the SBC instance - see [Creating Identity and Access Management -IAM- Role for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-identity-and-access-management--iam--role-for-SBC )
 
 >  **NOTE** 
 >
->  See [Ribbon SBC AWS SBC Instantiate Pre-Requisites](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/sbc-aws-prerequisites.md#ribbon-sbc-aws-sbc-instantiate-pre-requisites) for more details about all pre-requisites.
+>  See [Ribbon SBC AWS SBC Instantiate Pre-Requisites](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#ribbon-sbc-aws-sbc-instantiate-pre-requisites) for more details about all pre-requisites.
 
 ## Supported Instance Types
 
@@ -53,6 +53,7 @@ As of release 7.2S405, only following Instance types are supported for deploymen
   - c5n.2xlarge
   - c5n.4xlarge
   - c5n.9xlarge
+  - g3.4xlarge
   - p3.2xlarge
   
 ## Instantiating an HA SBC
