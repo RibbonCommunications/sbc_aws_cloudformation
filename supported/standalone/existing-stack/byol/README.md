@@ -2,7 +2,7 @@
 
 **Contents**
 - [Introduction](#Introduction)
-- [Pre-requisites for AWS CFN Install of SBC Standalone Instance](#pre-requisites-for-aws-cfn-install-of-sbc-standalone-instance- )
+- [Pre-requisites for AWS CFN Install of SBC Standalone Instance](#pre-requisites-for-aws-cfn-install-of-sbc-standalone-instance )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating a standalone SBC Instance](#instantiating-a-standalone-sbc-instance)
 - [Template parameters](#template-parameters)
