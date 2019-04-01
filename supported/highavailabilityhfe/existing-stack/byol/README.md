@@ -2,6 +2,7 @@
 
 **Contents**
 - [Introduction](#Introduction)
+- [Why HFE?](#whyhfe?)
 - [Pre-requisites for AWS CFN Install of SBC HA Instances](#pre-requisites-for-aws-cfn-install-of-sbc-ha-instances )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating an HA SBC](#instantiating-an-ha-sbc)
@@ -12,15 +13,26 @@
 
 ## Introduction ##
 
-This solution uses a CloudFormation Template to launch a single Ribbon SBC VE in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing.
+This solution uses a CloudFormation Template to launch a pair of Ribbon SBC VEs fronted by a forwarding engine VE in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing.
 
 This is an existing stack template, meaning the networking infrastructure MUST be available prior to deploying. See the Template Parameters Section for required networking objects. See the production stack directory for additional deployment options.
 
+> **NOTE**
+> The HFE is configured using a script named "HFE.sh". This script is available in addition to example CloudFormation templates which support deployment of an HA SBC with HFE. Both "HFE.sh" and CFN files are required to deploy an SBC with High-Availability Front-End.
+
 For information on getting started using Ribbon SBC CFT templates on GitHub, see [(**Amazon Web Services: Solutions 101**)]( http://clouddocs.f5.com/cloud/public/v1/aws/AWS_solutions101.html).
 
-## Pre-requisites for AWS CFN Install of SBC HA Instances 
+## Why HFE? ##
 
-Prior to initiating a CFN-based install of HA SBC instances perform the following:
+In AWS, High Availability is provided through the use of Elastic IP (EIP). With EIP, when a switchover is required from an active SBC instance to a standby instance, the IP address for the active server is moved to the standby instance through a REST API call, which can result in a 15 – 20 second switchover time. While this solution may be acceptable for the majority of web-based applications it does not meet the requirements needed for SBCs for real-time communications.
+
+To accomplish switchover times closer to 2 seconds Ribbon added an HA Front-End (HFE) to our AWS architecture solution to host the Elastic IP
+
+The High-Availability Front-End (HFE) is a lightweight instance with minimal processes used to forward packets from Public IP addresses to private IP addresses on the SBC. With the HFE, the public IP and secondary IP address of the active and standby SBC instances are separated, with the public IP address anchored on the HFE. During a switchover from active to standby only the secondary IP address is re-anchored from the active to standby node. This reduces the switchover time down to approximately 2 seconds.
+
+## Pre-requisites for AWS CFN Install of SBC HA with HFE Instances 
+
+Prior to initiating a CFN-based install of an HA SBC instance with HFE perform the following:
 
 1.  Create a VPC for use in the deployment - see [Creating VPC for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-vpc-for-sbc )
 
@@ -37,6 +49,10 @@ Prior to initiating a CFN-based install of HA SBC instances perform the followin
 7.  Create a placement group for the SBC deployment - see [Creating Placement Groups](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-placement-groups )
 
 8.  Create a Policy and Role for the SBC instance - see [Creating Identity and Access Management -IAM- Role for SBC](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-identity-and-access-management--iam--role-for-SBC )
+
+9.  Create a Policy and Role for the HFE instance - see [Creating Identity and Access Management -IAM- Role for HFE](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites/README.md#creating-identity-and-access-management--iam--role-for-HFE )
+
+10.  Locate the AMI ID in your region for an Amazon Linux 2 image - see [ Finding Amazon Linux 2 AMI ID for use in HFE deployments](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/pre_requisites#finding-amazon-linux-2-ami-id-for-use-in-hfe-deployments ) 
 
 >  **NOTE** 
 >
@@ -60,7 +76,7 @@ As of release 7.2S405, only following Instance types are supported for deploymen
 
 The easiest way to deploy this CloudFormation template is to use the Launch Stack button.
 
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_HA_template.json)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_HFE_HA_template.json)
 
 To manually instantiate HA SBC instances:
 
@@ -162,6 +178,22 @@ Perform the following steps to view the SBC SWe instances created:
 </tr>
 <tr class="even">
 <td>System configuration</td>
+<td><strong>HFEAMIID</strong></td>
+<td>Amazon Machine Image (AMI) of HFE Node. This is to be the latest AWS Linux 2 x86 AMI ID in your region : ami-xxxxxxxx.</td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+<tr class="odd">
+<td>System configuration</td>
+<td><strong>HFEScriptS3Location</strong></td>
+<td>Location of the HFE.sh script on a local S3. Enter the name of the bucket and file preceeded by s3:// , eg. s3://rbbn-sbc-cft/HFE.sh.</td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+<tr class="even">
+<td>System configuration</td>
 <td><strong>IAMRole</strong></td>
 <td>The name of the IAM role for SBC SWe instance. For more information on IAM Role, see Creating Identity and Access Management (IAM) Roles.</td>
 <td><strong>  X  </strong></td>
@@ -169,9 +201,25 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 </tr>
 <tr class="odd">
+<td>System configuration</td>
+<td><strong>IAMRoleHfe</strong></td>
+<tdThe name of the IAM role for HFe instance. For more information on IAM Role, see Creating Identity and Access Management (IAM) Roles.</td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+ <tr class="even">
 <td>Elastic IP configuration</td>
-<td><strong>EipAssociationOnMgt</strong></td>
+<td><strong>EipAssociationForMgt</strong></td>
 <td>Select <strong>Yes  </strong>from the drop-down  to associate EIP for MGT0 interface to login and access SBC application from public networks. Select <strong>No</strong> if not requiring EIP or if wishing to use a pre-allocated EIP for management.</td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+<tr class="odd">
+<td>Elastic IP configuration</td>
+<td><strong>SortHfeEip</strong></td>
+<td>Select <strong>Yes  </strong>from the drop-down  to  enable sorting based on HFE EIP.</td>
 <td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
@@ -285,6 +333,36 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 </tr>
 <tr class="even">
+<td>Elastic IP configuration</td>
+<td><strong>NumberOfEIPonHFEPublic</strong></td>
+<td><p>Enter the number of EIP(s), which are required to configure the HFE public port. It must be [<= NumberOfAlternateIPOnPkt0] of the SBC. This helps the user to use the maximum [NumberOfAlternateIPOnPkt0] for the public calls. For example, if the NumberOfAlternateIPOnPkt0 = 3 and the NumberOfSIPOnHFEPublic = 5, the HFE configures only 3 IPs for the public calls and the rest 2 IPs are unused.</p>
+<p><strong>Note</strong>: Default is 1</p></td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+<tr class="odd">
+<td>Elastic IP configuration</td>
+<td><strong>AllocateEIPOnHFEPublicInterface	</strong></td>
+<td><p>Set True to allocate EIPs from Amazon's pool of public IPv4 addresses on HFE public interface or set False to use pre-allocated/reserved EIPs.</p>
+<p><strong>Note</strong>: Default is True</p></td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+<tr class="even">
+<td>Elastic IP configuration</td>
+<td><strong>EIPAllocationIdList</strong></td>
+<td><p>If [AllocateEIPOnHFEPublicInterface] is set to False then enter comma separated pre-allocated/reserved EIPs allocation IDs and make sure number of EIP allocation IDs are equal to the [NumberOfSIPOnHFEPublic] value.
+
+For example,a list of EIPs allocation IDs could be:
+
+eipalloc-0f2e0f651bbf494fe,eipalloc-0a9ab9d240705c149,eipalloc-04e59f946b14980b8</p></td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+<tr class="odd">
 <td>Placement of Instance</td>
 <td><strong>PlacementId</strong></td>
 <td>A placement group ID of logical group of instances within a single Availability Zone. This is an optional field and can be blank.</td>
@@ -292,26 +370,6 @@ Perform the following steps to view the SBC SWe instances created:
 <td><strong>  X  </strong></td>
 <td>  </td>
 </tr>
-<tr class="odd">
-<td>Reverse NAT configuration</td>
-<td><strong>ReveseNatEnablePkt0</strong></td>
-<td><p>Enable or disable reverse Network Address Translation (NAT) functionality for PKT0 interface. Set this field to true, to attach the assigned EIP on PKT0 and use it without SMM rule. See  EipAssociationXface  for associating EIP for the required interfaces.</p>
-<p><strong>Note:</strong>  When set to False, the SBC application cannot use the attached EIP.</p></td>
-<td><strong>  X  </strong></td>
-<td>  </td>
-<td>  </td>
-</tr>
-<tr class="even">
-<td>Reverse NAT configuration</td>
-<td><strong>ReveseNatEnablePkt1</strong></td>
-<td><p>Enable or disable reverse Network Address Translation (NAT) functionality for PKT1 interface. Set this field to true, to attach the assigned EIP on PKT1 and use it without SMM rule.  See  EipAssociationXface      for associating EIP for the required interfaces.</p>
-<p><strong>Note:</strong>  When set to False, the SBC application cannot use the attached EIP.</p></td>
-<td><strong>  X  </strong></td>
-<td>  </td>
-<td>  </td>
-</tr>
-<tr class="odd">
-<td>System configuration</td>
 <td><strong>SBCPersonality</strong></td>
 <td>The type of SBC for this deployment. In this release the personality should always be set to <strong>isbc</strong>.</td>
 <td><strong>  X  </strong></td>
@@ -352,13 +410,56 @@ Perform the following steps to view the SBC SWe instances created:
 </tr>
 <tr class="even">
 <td>Network configuration</td>
+<td><strong>SecurityGrpHFEPublic</strong></td>
+<td>Acts as a firewall for associated Amazon EC2 instances, controlling both inbound and outbound traffic to HFE.</td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+<tr class="odd">
+<td>Network configuration</td>
+<td><strong>SubnetIdHFePublic</strong></td>
+<td>Subnet ID of an existing subnet in your Virtual Private Cloud (VPC) for the Public Interface of HFE.</td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+<tr class="even">
+<td>Network configuration</td>
+<td><strong>SubnetIdHFeTowardsSBC</strong></td>
+<td>SubnetId of an existing subnet in your Virtual Private Cloud (VPC) for the private interface on HFE (towards the SBC).</td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+
+<tr class="odd">
+<td>Network configuration</td>
+<td><strong>remoteSSHMachinePublicIP</strong></td>
+<td>Optionally the HFE management interface can be accessed from a public server. Enter IP(public IP) of machine that will connect(SSH) to HFE using public IP.</td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+
+<tr class="even">
+<td>Network configuration</td>
+<td><strong>SecurityGrpPktHFETowardsSBC</strong></td>
+<td>Acts as a firewall for associated Amazon EC2 instances, controlling both inbound and outbound traffic between HFE and SBC.</td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
+
+<tr class="odd">
+<td>Network configuration</td>
 <td><strong>SubnetIdHA0</strong></td>
 <td>Subnet ID of an existing subnet in your Virtual Private Cloud (VPC) for HA0.</td>
 <td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Network configuration</td>
 <td><strong>SubnetIdMgt0</strong></td>
 <td>Subnet ID of an existing subnet in your Virtual Private Cloud (VPC) for Mgt0.</td>
@@ -366,7 +467,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 <td>  </td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Network configuration</td>
 <td><strong>SubnetIdPkt0</strong></td>
 <td>SubnetId of an existing subnet in your Virtual Private Cloud (VPC) for Pkt0.</td>
@@ -374,7 +475,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 <td>  </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Network configuration</td>
 <td><strong>SubnetIdPkt1</strong></td>
 <td>SubnetId of an existing subnet in your Virtual Private Cloud (VPC) for Pkt1.</td>
@@ -382,7 +483,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 <td>  </td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>System configuration</td>
 <td><strong>SystemName</strong></td>
 <td><p>Specifies the actual system name of the SBC instance. For more information, see  <a href="https://wiki.sonusnet.com/display/SBXDOC62/System+and+Instance+Naming+Conventions">System and Instance Naming Conventions</a>.</p>
@@ -402,7 +503,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 <td>  </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Storage configuration</td>
 <td><strong>Volume Size</strong></td>
 <td>Enter size of disk required in GB. The minimum size is 65 GIB, however more can be chosen.</td>
@@ -410,7 +511,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 <td><strong>  X  </strong>  </td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Placement of Instance</td>
 <td><strong>Tenancy</strong></td>
 <td>The Tenancy Attribute for this instance.</td>
@@ -418,7 +519,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 <td>  </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Storage configuration</td>
 <td><strong>Volume Type</strong></td>
 <td>Select the type of volume for SBC. It is recommended that SBC use io1 type.</td>
@@ -426,7 +527,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 <td>  </td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Network configuration</td>
 <td><strong>VpcId</strong></td>
 <td>Select a VPC with Subnet, Security Group, etc., selected earlier.</td>
@@ -434,7 +535,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 <td>  </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Third Party Applications Provisioning</td>
 <td><strong>Third Party CPUs</strong></td>
 <td>Enter number of CPUs to be reserved for use with third party apps. <strong>Note</strong>: Default is 0</td>
@@ -442,7 +543,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 <td><strong>  X  </strong>  </td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Third Party Applications Provisioning</td>
 <td><strong>Third Party Memory</strong></td>
 <td>Enter number of MB of memory to be reserved for use with third party apps.   <strong>Note</strong>: Default is 0</td>
