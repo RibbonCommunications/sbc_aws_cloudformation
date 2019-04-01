@@ -17,4 +17,22 @@ The following table contains all of the tagged releases of the Ribbon SBC Cloud 
 <td>AWS_Stand_Alone_template</td>
 <td>SBC 07.02.00S400</td>
 </tr>
+<tr class="odd">
+<td> </td>
+<td>High-Availability</td>
+<td>AWS_HA_template</td>
+<td>SBC 07.02.00S400</td>
+</tr>
+ <tr class="odd">
+<td> </td>
+<td>High-Availabilty with Forwarding Engine</td>
+<td>AWS_HFE_HA_template</td>
+<td>SBC 07.02.00S400</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td> </td>
+<td>AWS_HFE_HA_template_auto_subnet</td>
+<td>SBC 07.02.00S400</td>
+</tr>
 </table>
