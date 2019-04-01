@@ -1,0 +1,2 @@
+## Version Matrix for AWS CFT Templates
+The following table contains all of the tagged releases of the F5 Cloud Formation Templates (CFTs) for Amazon AWS, and the corresponding BIG-IP versions, license types and throughput levels available for a specific tagged release.  To view a Tag, from the f5-aws-cloudformation repo (https://github.com/F5Networks/f5-aws-cloudformation/ or a sub directory), click the Branch < current branch > button, and then click the *Tags* tab.  You see a list of all of the F5 tagged releases.
