@@ -29,7 +29,7 @@ Descriptions for each template are contained at the top of each template in the�
 
 **Matrix for tagged releases**
 
-Ribbon has created a matrix that contains all of the tagged releases of the Ribbon SBC Cloud Formation Templates (CFTs) for Amazon AWS. See the [AWS SBC Matrix](https://github.com/RibbonCommunications/sbc-aws-cloudformation/blob/master/aws-sbc-version-matrix.md).
+Ribbon has created a matrix that contains all of the tagged releases of the Ribbon SBC Cloud Formation Templates (CFTs) for Amazon AWS. See the [AWS SBC Matrix](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/aws-sbc-version-matrix.md).
 
 **Quick Start**
 
