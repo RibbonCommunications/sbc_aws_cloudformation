@@ -203,7 +203,7 @@ Perform the following steps to view the SBC SWe instances created:
 <tr class="odd">
 <td>System configuration</td>
 <td><strong>IAMRoleHfe</strong></td>
-<tdThe name of the IAM role for HFe instance. For more information on IAM Role, see Creating Identity and Access Management (IAM) Roles.</td>
+<td>The name of the IAM role for HFe instance. For more information on IAM Role, see Creating Identity and Access Management (IAM) Roles.</td>
 <td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
