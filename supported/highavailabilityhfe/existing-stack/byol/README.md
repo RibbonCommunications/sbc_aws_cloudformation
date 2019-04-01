@@ -72,7 +72,7 @@ As of release 7.2S405, only following Instance types are supported for deploymen
   - g3.4xlarge
   - p3.2xlarge
   
-## Instantiating an HA SBC
+## Instantiating an HA SBC with HFE
 
 The easiest way to deploy this CloudFormation template is to use the Launch Stack button.
 
