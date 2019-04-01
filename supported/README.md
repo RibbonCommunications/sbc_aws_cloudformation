@@ -22,7 +22,7 @@ Ribbon has created templates grouped into the following categories.
     protocols like Gratuitous ARP, route updates, and so on). For more
     information, see the highavailability README files.  
 
-  - **High Availability with Front End (hfe)**   
+  - **HighAvailability with HFE**   
     These templates deploy an Active and a Standby SBC instance, plus a
     High Availability Front End in a cluster. High Availability clusters
     with Front End are primarily used to replicate traditional
