@@ -6,7 +6,7 @@ Ribbon has created templates grouped into the following categories.
     These templates deploy an individual SBC instance. Standalone SBC
     instances are primarily used for Dev/Test/Staging.
 
-  - **High Availability**   
+  - **HighAvailability**   
     These templates deploy an Active and a Standby SBC instance in a
     cluster. High Availability clusters are primarily used to replicate
     traditional Active/Standby SBC deployments. The failover can result
@@ -22,7 +22,7 @@ Ribbon has created templates grouped into the following categories.
     protocols like Gratuitous ARP, route updates, and so on). For more
     information, see the highavailability README files.  
 
-  - **High Availability with Front End**   
+  - **High Availability with Front End (hfe)**   
     These templates deploy an Active and a Standby SBC instance, plus a
     High Availability Front End in a cluster. High Availability clusters
     with Front End are primarily used to replicate traditional
