@@ -3,7 +3,7 @@
 **Contents**
 - [Introduction](#Introduction)
 - [What is the HFE?](#what-is-the-hfe)
-- [Pre-requisites for AWS CFN Install of SBC HA Instances](#pre-requisites-for-aws-cfn-install-of-sbc-ha-instances )
+- [Pre-requisites for AWS CFN Install of SBC HA Instances with HFE](#pre-requisites-for-aws-cfn-install-of-sbc-ha-instances-with-hfe )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating an HA SBC with HFE](#instantiating-an-ha-sbc-with-hfe)
 - [Template parameters](#template-parameters)
@@ -37,7 +37,7 @@ To accomplish switchover times closer to 2 seconds Ribbon added an HA Front-End 
 
 The High-Availability Front-End (HFE) is a lightweight instance with minimal processes used to forward packets from Public IP addresses to private IP addresses on the SBC. With the HFE, the public IP and secondary IP address of the active and standby SBC instances are separated, with the public IP address anchored on the HFE. During a switchover from active to standby only the secondary IP address is re-anchored from the active to standby node. This reduces the switchover time down to approximately 2 seconds.
 
-## Pre-requisites for AWS CFN Install of SBC HA with HFE Instances 
+## Pre-requisites for AWS CFN Install of SBC HA Instances with HFE
 
 Prior to initiating a CFN-based install of an HA SBC instance with HFE perform the following:
 
