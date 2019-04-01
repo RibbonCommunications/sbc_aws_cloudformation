@@ -543,7 +543,7 @@ eipalloc-0f2e0f651bbf494fe,eipalloc-0a9ab9d240705c149,eipalloc-04e59f946b14980b8
 
 The following is a simple configuration diagram for this Ribbon SBC HA deployment.
 <p align="center">
-<image src="https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/images/RBBN-SBC-SA.png" width=800 title="Ribbon SBC standalone"></p>
+<image src="https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/images/RBBN-SBC-HFE-HA.png" width=800 title="Ribbon SBC HA with HFE"></p>
 
 ## More documentation
 
