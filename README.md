@@ -33,13 +33,9 @@ Ribbon has created a matrix that contains all of the tagged releases of the Ribb
 
 **Quick Start**
 
-The quickstart template allows you to quickly launch a High Availability SBC Cluster into AWS to demonstrate a typical High Availability
-deployment model.
+The quickstart template allows you to quickly launch a High Availability SBC Cluster with High Availability Front End into AWS to demonstrate the recommended typical High Availability deployment model.
 
-For detailed information, we recommend you first see the <span class="underline">Quick Start README file</span>
-
-Or you can use the Launch Stack button to get started:  
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_Stand_Alone_template.json)
+For detailed information, we recommend you first see the [Ribbon High-Availabilty SBC with HFE](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/highavailabilityhfe/existing-stack/byol/HFEautoSubnet.md)
 
 **All Ribbon SBC Supported templates for AWS**
 
