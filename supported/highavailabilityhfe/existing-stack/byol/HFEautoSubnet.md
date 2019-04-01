@@ -2,7 +2,7 @@
 
 **Contents**
 - [Introduction](#Introduction)
-- [What is the HFE?](#what-is-the-hfe?)
+- [What is the HFE?](#what-is-the-hfe)
 - [Pre-requisites for AWS CFN Install of SBC HA Instances](#pre-requisites-for-aws-cfn-install-of-sbc-ha-instances )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating an HA SBC with HFE](#instantiating-an-ha-sbc-with-hfe)
