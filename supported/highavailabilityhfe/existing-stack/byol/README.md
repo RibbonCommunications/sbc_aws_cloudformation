@@ -78,7 +78,7 @@ The easiest way to deploy this CloudFormation template is to use the Launch Stac
 
 [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_HFE_HA_template.json)
 
-To manually instantiate HA SBC instances:
+To manually instantiate HA SBC instances with HFE:
 
 1.  Log onto AWS.
 
