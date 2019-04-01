@@ -316,24 +316,6 @@ Perform the following steps to view the SBC SWe instances created:
 </tr>
 <tr class="even">
 <td>Elastic IP configuration</td>
-<td><strong>Number of EIP on PKT 0</strong></td>
-<td><p>The number of Elastic IPs to be associated with PKT 0 interface.</p>
-<p><strong>Note</strong>: Default is 0</p></td>
-<td><strong>  X  </strong></td>
-<td>  </td>
-<td>  </td>
-</tr>
-<tr class="odd">
-<td>Elastic IP configuration</td>
-<td><strong>Number of EIP on PKT 1</strong></td>
-<td><p>The number of Elastic IPs to be associated with PKT 1 interface.</p>
-<p><strong>Note</strong>: Default is 0</p></td>
-<td><strong>  X  </strong></td>
-<td>  </td>
-<td>  </td>
-</tr>
-<tr class="even">
-<td>Elastic IP configuration</td>
 <td><strong>NumberOfEIPonHFEPublic</strong></td>
 <td><p>Enter the number of EIP(s), which are required to configure the HFE public port. It must be [<= NumberOfAlternateIPOnPkt0] of the SBC. This helps the user to use the maximum [NumberOfAlternateIPOnPkt0] for the public calls. For example, if the NumberOfAlternateIPOnPkt0 = 3 and the NumberOfSIPOnHFEPublic = 5, the HFE configures only 3 IPs for the public calls and the rest 2 IPs are unused.</p>
 <p><strong>Note</strong>: Default is 1</p></td>
