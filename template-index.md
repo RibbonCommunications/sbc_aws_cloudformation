@@ -15,13 +15,20 @@ Click the links to view the README files which include the Launch buttons and ad
 [**High-Availability SBC**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailability/existing-stack)
 - Existing Stack which includes active and standby instances with application redundancy (typical)
    o	BYOL (bring your own license)
+   
+   [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_HA_template.json)
+   
  
 [**High-Availability SBC with Front END (HFE subnet pre-allocated)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailabilityhfe/existing-stack)
 - Existing Stack for HA-SBC with HFE frontend to minimize failover times - all subnets must be pre-allocated (typical)
    o	BYOL (bring your own license)
+   
+   [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_HFE_HA_template.json)
+   
  
 [**High-Availability SBC with Front End (HFE subnet auto-allocated)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailabilityhfe/existing-stack)
 - Existing Stack for HA-SBC with HFE frontend to minimize failover times - HFE private subnet is automatically created (typical)
    o	BYOL (bring your own license)
- 
+   
+ [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_HFE_HA_template_auto_subnet.json)
 
