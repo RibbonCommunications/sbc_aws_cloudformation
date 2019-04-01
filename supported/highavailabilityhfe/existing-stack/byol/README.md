@@ -340,8 +340,8 @@ Perform the following steps to view the SBC SWe instances created:
 For example,a list of EIPs allocation IDs could be:
 
 eipalloc-0f2e0f651bbf494fe,eipalloc-0a9ab9d240705c149,eipalloc-04e59f946b14980b8</p></td>
-<td><strong>  X  </strong></td>
-<td>  </td>
+<td> </td>
+<td><strong> X  </strong></td>
 <td>  </td>
 </tr>
 <tr class="odd">
