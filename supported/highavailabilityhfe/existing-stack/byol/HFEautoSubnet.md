@@ -2,7 +2,7 @@
 
 **Contents**
 - [Introduction](#Introduction)
-- [Why HFE?](#whyhfe?)
+- [What is the HFE?](#whatisthehfe?)
 - [Pre-requisites for AWS CFN Install of SBC HA Instances](#pre-requisites-for-aws-cfn-install-of-sbc-ha-instances )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating an HA SBC with HFE](#instantiating-an-ha-sbc-with-hfe)
@@ -13,16 +13,23 @@
 
 ## Introduction ##
 
-This solution uses a CloudFormation Template to launch a pair of Ribbon SBC VEs fronted by a forwarding engine VE in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing. **In this deployment a private subnet is automatically allocated between the HFE and SBC.**
+This solution uses a CloudFormation Template to launch a pair of Ribbon SBC VEs fronted by a forwarding engine VE in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing. 
 
-This is an existing stack template, meaning the networking infrastructure MUST be available prior to deploying. See the Template Parameters Section for required networking objects. See the production stack directory for additional deployment options.
+This is an existing stack template, meaning the networking infrastructure MUST be available prior to deploying. **Note however, in this deployment a private subnet is automatically allocated between the HFE and SBC.**
+
+See the Template Parameters Section for required networking objects. 
+
+See the production stack directory for additional deployment options.
+
+> **NOTE**
+> The High-Availability Front End (HFE) front-ends only one pkt port (pkt0), public endpoints can be connected only to pkt0. Pkt1 can serve private endpoints.
 
 > **NOTE**
 > The HFE is configured using a script named "HFE.sh". This script is available in addition to example CloudFormation templates which support deployment of an HA SBC with HFE. Both "HFE.sh" and CFN files are required to deploy an SBC with High-Availability Front-End.
 
 For information on getting started using Ribbon SBC CFT templates on GitHub, see [(**Amazon Web Services: Solutions 101**)]( http://clouddocs.f5.com/cloud/public/v1/aws/AWS_solutions101.html).
 
-## Why HFE? ##
+## What is the HFE? ##
 
 In AWS, High Availability is provided through the use of Elastic IP (EIP). With EIP, when a switchover is required from an active SBC instance to a standby instance, the IP address for the active server is moved to the standby instance through a REST API call, which can result in a 15 – 20 second switchover time. While this solution may be acceptable for the majority of web-based applications it does not meet the requirements needed for SBCs for real-time communications.
 
