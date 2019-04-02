@@ -182,15 +182,15 @@ Perform the following steps to view the SBC SWe instances created:
 <td><p>Specifies the actual CE name of the SBC active instance. For more information, see  <a href="https://wiki.sonusnet.com/display/SBXDOC62/System+and+Instance+Naming+Conventions">System and Instance Naming Conventions</a>.</p>
 <p><strong>CEName Requirements:</strong></p>
 <ul>
-<li><blockquote>
+<li>
 <p>Must start with an alphabetic character.</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Only contain alphabetic characters and/or numbers. No special characters.</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Cannot exceed 64 characters in length</p>
-</blockquote></li>
+</li>
 </ul></td>
 <td><strong>  X  </strong></td>
 <td>  </td>
@@ -202,15 +202,15 @@ Perform the following steps to view the SBC SWe instances created:
 <td><p>Specifies the actual CE name of the SBC standby instance. For more information, see  <a href="https://wiki.sonusnet.com/display/SBXDOC62/System+and+Instance+Naming+Conventions">System and Instance Naming Conventions</a>.</p>
 <p><strong>CEName Requirements:</strong></p>
 <ul>
-<li><blockquote>
+<li>
 <p>Must start with an alphabetic character.</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Only contain alphabetic characters and/or numbers. No special characters.</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Cannot exceed 64 characters in length</p>
-</blockquote></li>
+</li>
 </ul></td>
 <td><strong>  X  </strong></td>
 <td>  </td>
