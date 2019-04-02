@@ -2,6 +2,7 @@
 
 **Contents**
 - [Introduction](#Introduction)
+- [Files](#Files-in-this-repo)
 - [Pre-requisites for AWS CFN Install of SBC HA Instances](#pre-requisites-for-aws-cfn-install-of-sbc-ha-instances )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating an HA SBC](#instantiating-an-ha-sbc)
@@ -17,6 +18,12 @@ This solution uses a CloudFormation Template to launch a pair of Ribbon SBC VEs 
 This is an existing stack template, meaning the networking infrastructure MUST be available prior to deploying. See the Template Parameters Section for required networking objects. See the production stack directory for additional deployment options.
 
 For information on getting started using Ribbon SBC CFT templates on GitHub, see [**Amazon Web Services: Solutions 101**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/AmazonWebServices-Solutions_101.md).
+
+## Files in this repo ##
+
+- **AWS_HA_template.json**	- CFT template to use to launch this SBC Solution.
+
+- **README.md** - this README file
 
 ## Pre-requisites for AWS CFN Install of SBC HA Instances 
 
