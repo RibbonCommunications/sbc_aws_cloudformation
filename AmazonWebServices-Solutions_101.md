@@ -4,17 +4,15 @@ You can create Ribbon SBC configurations quickly, reliably, and without being an
 
 Each CFT creates a pre-configured Ribbon SBC solution, saving you the time and effort involved in a manual configuration.
 CFTs can create configurations like:
-•	Two SBC VE instances with failover/high availability
-•	An SBC "triplet" consisting of two SBC VE instances with High Availability Front End to fast EIP-based failover/high availability 
-•	A standalone SBC instance
-•	And more
+- Two SBC VE instances with failover/high availability
+- An SBC "triplet" consisting of two SBC VE instances with High Availability Front End to fast EIP-based failover/high availability 
+- A standalone SBC instance
 
-Additionally, each CFT can:
-•	Introduce a Ribbon SBC into an existing environment (useful when you already have apps in the cloud and want to add SBC)
+Additionally, each CFT can introduce a Ribbon SBC into an existing environment (useful when you already have apps in the cloud and want to add SBC)
 
 **Note**: AWS CFTs that create new resources are in an experimental folder in github and Ribbon does not support them. However, you’re welcome to play with them to see how things work.
 
-**Working in github**
+## Working in github
 
 Github is a source control system where CFTs and related resources live.
 
@@ -34,7 +32,7 @@ To deploy the solution, follow the steps in the wizard.
 
 **Important:** If you have never deployed an instance in AWS before, you must go to the AWS Marketplace and accept the software licensing terms, or the deployment will fail. You will see a button that looks like this: ![](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/images/acceptSoftwareTerms.png)
 
-## How to copy a CFT
+**How to copy a CFT**
 
 If you want your own copy of the CFTs, so you can ensure you don’t accidentally edit someone else’s CFT, there are a few ways to do this.
 
@@ -58,10 +56,10 @@ To do this, click ![](https://github.com/RibbonCommunications/sbc_aws_cloudforma
 **Best practices**
 
 How you work in github is up to you, but here are some do's and don'ts:
-•	Do create a clone or fork of the project and mess with files there.
-•	Don’t create a branch when you’re in the RibbonCommunications project. The developers at Ribbon use these branches to manage their workflow.
-•	Don’t use experimental templates in production environments. Ribbon does not support it.
-•	Do use supported templates, and edit only the custom configuration section detailed below.
+- Do create a clone or fork of the project and mess with files there.
+- Do not create a branch when you’re in the RibbonCommunications project. The developers at Ribbon use these branches to manage their workflow.
+- Do not use experimental templates in production environments. Ribbon does not support it.
+- Do use supported templates, and edit only the custom configuration section detailed below.
 
 ## How to deploy a CFT
 You can deploy a template a few different ways.
