@@ -2,7 +2,7 @@
 
 The following is a list of the current supported SBC CloudFormation templates. See the [experimental](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/experimental) directory for experimental templates. 
 
-Click the links to view the README files which include the Launch buttons and additional information, or click the Launch Stack buttons to immediately launch the template. Because individual templates may have specific prerequisites, we strongly recommend you view the README file before attempting to launch a template.
+Click the title links below to view the README files which include the Launch buttons and additional information, or click the Launch Stack buttons to immediately launch the template. Because individual templates may have specific prerequisites, we strongly recommend you view the README file before attempting to launch a template.
 
 **Important:** You may have to select the AWS region in which you want to deploy after clicking the Launch Stack button 
 
