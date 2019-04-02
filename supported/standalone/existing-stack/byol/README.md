@@ -21,8 +21,9 @@ For information on getting started using Ribbon SBC CFT templates on GitHub, see
 
 ## Files in this repo ##
 
-**AWS_Stand_Alone_template.json**	- CFT template to use to launch this SBC Solution. 
-**README.md** - this README file
+- **AWS_Stand_Alone_template.json**	- CFT template to use to launch this SBC Solution.
+
+- **README.md** - this README file
 
 ## Pre-requisites for AWS CFN Install of SBC Standalone Instance  
 
