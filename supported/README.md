@@ -1,6 +1,6 @@
 **Template Types**
 
-Ribbon has created templates grouped into the following categories.
+Ribbon has created templates grouped into the following categories. Each of the templates has pre-requisites. For details about pre-requisites see [here](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/pre_requisites).
 
   - [**Standalone**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone)
   
@@ -35,7 +35,7 @@ Ribbon has created templates grouped into the following categories.
     (EIP). With EIP, when a switchover is required from an active SBC
     instance to a standby instance, the IP address for the active server
     is moved to the standby instance through a REST API call, which can
-    result in a 15 €“ 20 second switchover time. While this solution may
+    result in a 15 to 20 second switchover time. While this solution may
     be acceptable for the majority of web-based applications it does not
     meet the requirements needed for SBCs for real-time communications.
 
