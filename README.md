@@ -41,7 +41,7 @@ For detailed information, we recommend you first see the [Ribbon High-Availabil
 
 **All Ribbon SBC Supported templates for AWS**
 
-To see a list of all of our supported AWS CloudFormation templates, see the [**AWS SBC Supported Template index**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/template-index.md).
+To see a list of all of our supported AWS CloudFormation templates, see the [**AWS SBC Supported Template index**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/aws-sbc-template-index.md).
 
 **Copyright**
 
