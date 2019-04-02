@@ -5,7 +5,9 @@ CloudFormation Templates for quickly deploying SBC in Amazon Web Services EC2
 
 Welcome to the GitHub repository for Ribbon SBC's Cloud Formation templates for deploying Ribbon SBC in Amazon Web Services. All of the templates in this repository have been developed by Ribbon SBC engineers.
 
-For information on getting started using Ribbon SBC's CFT templates on GitHub, see the README files in each directory.
+For information on getting started using this repository, see [**here**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/AmazonWebServices-Solutions_101.md).
+
+For information on getting started using Ribbon SBC's CFT templates on GitHub, see the **README** files in each directory.
 
 Across all branches in this repository, there are two directories: *supported* and *experimental*.
 
