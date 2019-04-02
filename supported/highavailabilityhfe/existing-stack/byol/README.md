@@ -10,9 +10,11 @@ For each template, you have different options for licensing your Ribbon SBC. Not
 
 ## Files in this repo ##
 
-- **AWS_HA_HFE.json**	- CFT template to use to launch SBC Solution with HFE (manual HFE Private Subnet creation pre-requisite).
+- **AWS_HA_HFE_template.json**	- CFT template to use to launch SBC Solution with HFE (manual HFE Private Subnet creation pre-requisite).
 
-- **AWS_HA_HFE_auto_subnet.json**	- CFT template to use to launch SBC Solution with HFE (automated HFE Private Subnet creation).
+- **AWS_HA_HFE_template_auto_subnet.json**	- CFT template to use to launch SBC Solution with HFE (automated HFE Private Subnet creation).
+
+- **HFE.sh**	- Script that is used by the AWS_HA_HFE CFNs to configure the HFE instance once deployed.
 
 - **HFEautoSubnet.md**	- README for deploying SBC Solution with HFE - (automatically created HFE Private Subnet).
 
