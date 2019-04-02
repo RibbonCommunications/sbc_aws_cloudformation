@@ -438,7 +438,6 @@ Perform the following steps to view the SBC SWe instances created:
 ## Configuration Example
 
 The following is a simple configuration diagram for this Ribbon SBC standalone deployment.
-<p align="center">
 ![](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/standalone/existing-stack/images/RBBN-SBC-SA.png)
 
 ## More documentation
