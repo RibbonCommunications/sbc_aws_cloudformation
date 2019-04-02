@@ -27,7 +27,7 @@ Across all branches in this repository, there are two directories: *supported*�
 
 **Template information**
 
-Descriptions for each template are contained at the top of each template in the *Description* key. For additional information, including how the templates are generated, and assistance in deploying a template, see the README file on the individual template pages.
+Descriptions for each template are contained at the top of each template in the *Description* key. For additional information, including how the templates are generated, and assistance in deploying a template, see the **README** file on the individual template pages.
 
 **Matrix for tagged releases**
 
