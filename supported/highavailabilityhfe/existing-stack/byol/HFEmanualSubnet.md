@@ -227,7 +227,7 @@ Perform the following steps to view the SBC SWe instances created:
 <tr class="even">
 <td>SBC configuration</td>
 <td><strong>ActiveInstanceName</strong></td>
-<td><p>Specifies the actual CE name of the SBC active instance. For more information, see  <a href="https://wiki.sonusnet.com/display/SBXDOC62/System+and+Instance+Naming+Conventions">System and Instance Naming Conventions</a>.</p>
+<td><p>Specifies the actual CE name of the SBC active instance. For more information, see  <a href="https://wiki.sonusnet.com/display/SBXDOC72/System+and+Instance+Naming+Conventions">System and Instance Naming Conventions</a>.</p>
 <p><strong>CEName Requirements:</strong></p>
 <ul>
 <li>
@@ -247,7 +247,7 @@ Perform the following steps to view the SBC SWe instances created:
 <tr class="odd">
 <td>SBC configuration</td>
 <td><strong>Standby InstanceName</strong></td>
-<td><p>Specifies the actual CE name of the SBC standby instance. For more information, see  <a href="https://wiki.sonusnet.com/display/SBXDOC62/System+and+Instance+Naming+Conventions">System and Instance Naming Conventions</a>.</p>
+<td><p>Specifies the actual CE name of the SBC standby instance. For more information, see  <a href="https://wiki.sonusnet.com/display/SBXDOC72/System+and+Instance+Naming+Conventions">System and Instance Naming Conventions</a>.</p>
 <p><strong>CEName Requirements:</strong></p>
 <ul>
 <li>
