@@ -2,7 +2,7 @@
 
 **Contents**
 - [Introduction](#Introduction)
-- [What is the HFE?](#what-is-the-hfe)
+- [Why HFE?](#why-hfe)
 - [Pre-requisites for AWS CFN Install of SBC HA Instances with HFE](#pre-requisites-for-aws-cfn-install-of-sbc-ha-instances-with-hfe )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating an HA SBC with HFE](#instantiating-an-ha-sbc-with-hfe)
@@ -29,7 +29,7 @@ See the production stack directory for additional deployment options.
 
 For information on getting started using Ribbon SBC CFT templates on GitHub, see [**Amazon Web Services: Solutions 101**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/AmazonWebServices-Solutions_101.md).
 
-## What is the HFE? ##
+## Why HFE? ##
 
 In AWS, High Availability is provided through the use of Elastic IP (EIP). With EIP, when a switchover is required from an active SBC instance to a standby instance, the IP address for the active server is moved to the standby instance through a REST API call, which can result in a 15 – 20 second switchover time. While this solution may be acceptable for the majority of web-based applications it does not meet the requirements needed for SBCs for real-time communications.
 
