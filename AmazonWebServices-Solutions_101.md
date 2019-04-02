@@ -84,9 +84,9 @@ To choose an older release, select a branch tag. For example:
 
 ## What is an AMI ID?
 
-When you’re working with CFTs, it’s good to know about AMI IDs. An AMI is an Amazon Machine Image.
+When you’re working with CFTs, it’s good to know about AMI IDs. An AMI is an *Amazon Machine Image*.
 
-Every Ribbon SBC image in the AWS Marketplace has an image identifier, or AMI ID.
+Every Ribbon SBC image in the AWS Marketplace has an image identifier, or *AMI ID*.
 
 When you view any Ribbon offering in the Marketplace, you can continue past the first page, and view AMI IDs on the **Manual Launch** tab:
  
