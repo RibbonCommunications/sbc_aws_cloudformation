@@ -28,7 +28,7 @@ The quickest, easiest way to deploy a CFT is to open the folder called **support
 Then view the associated README, scroll down, and click ![](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg) . 
 
 The CFT opens in the AWS console.
-![](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/images/RBBN-sbc_aws_cloudformation.png)
+<img src="https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/images/RBBN-sbc_aws_cloudformation.png" alt="sbc_aws_cloudformation" height="420" width="420">
 
 To deploy the solution, follow the steps in the wizard.
 
@@ -39,7 +39,7 @@ To deploy the solution, follow the steps in the wizard.
 If you want your own copy of the CFTs, so you can ensure you don’t accidentally edit someone else’s CFT, there are a few ways to do this.
 
 **Create a clone**
-To create a personal copy of the project and its CFTs, the easiest thing to do is click ![](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/images/fork.png)  in the top right.
+To create a personal copy of the project and its CFTs, the easiest thing to do is click ![](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/images/cloneOrDownload.png)  in the top right.
 
 You can then download a zip file, use the GIT command line or SSH, or if you have GitHub Desktop installed, download and work with the files there.
 
