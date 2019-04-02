@@ -2,11 +2,13 @@
 
 Ribbon has created templates grouped into the following categories.
 
-  - **Standalone**   
+  - [**Standalone**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone)
+  
     These templates deploy an individual SBC instance. Standalone SBC
     instances are primarily used for Dev/Test/Staging.
 
-  - **HighAvailability**   
+  - [**HighAvailability**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailability)
+  
     These templates deploy an Active and a Standby SBC instance in a
     cluster. High Availability clusters are primarily used to replicate
     traditional Active/Standby SBC deployments. The failover can result
@@ -22,7 +24,8 @@ Ribbon has created templates grouped into the following categories.
     protocols like Gratuitous ARP, route updates, and so on). For more
     information, see the highavailability README files.  
 
-  - **HighAvailabilityHFE**   
+  - [**HighAvailabilityHFE**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailabilityhfe)
+  
     These templates deploy an Active and a Standby SBC instance, plus a
     High Availability Front End in a cluster. High Availability clusters
     with Front End are primarily used to replicate traditional
