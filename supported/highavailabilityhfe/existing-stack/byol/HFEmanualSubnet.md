@@ -20,7 +20,7 @@ This is an existing stack template, meaning the networking infrastructure MUST b
 > **NOTE**
 > The HFE is configured using a script named "HFE.sh". This script is available in addition to example CloudFormation templates which support deployment of an HA SBC with HFE. Both "HFE.sh" and CFN files are required to deploy an SBC with High-Availability Front-End.
 
-For information on getting started using Ribbon SBC CFT templates on GitHub, see [(**Amazon Web Services: Solutions 101**)]( http://clouddocs.f5.com/cloud/public/v1/aws/AWS_solutions101.html).
+For information on getting started using Ribbon SBC CFT templates on GitHub, see [**Amazon Web Services: Solutions 101**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/AmazonWebServices-Solutions_101.md).
 
 ## Why HFE? ##
 
