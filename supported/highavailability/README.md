@@ -5,12 +5,14 @@ into which you want to deploy the SBC. See the individual README files
 for exact requirements. Note that not all options are available for all
 templates.
 
-  - **Existing Stack**   
+  - [**Existing Stack**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailability/existing-stack)
+  
     These templates deploy into an existing cloud network. This means
     that all of the cloud networking infrastructure must be available
     prior to launching the template.
 
-  - **Production Stack**   
+  - [**Production Stack**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailability/production-stack)    
+  
     Production stack templates also require the cloud networking
     infrastructure to be in place, however these templates do not create
     or attach a public IP address/NAT (there is never a public IP
