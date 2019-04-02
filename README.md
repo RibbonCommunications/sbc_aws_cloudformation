@@ -7,7 +7,7 @@ Welcome to the GitHub repository for Ribbon SBC's Cloud Formation templates for 
 
 For information on getting started using this repository, see [**here**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/AmazonWebServices-Solutions_101.md).
 
-For information on getting started using Ribbon SBC's CFT templates on GitHub, see the **README** files in each directory.
+For information on using Ribbon SBC's CFT templates on GitHub, see the **README** files in each directory.
 
 Across all branches in this repository, there are two directories: *supported* and *experimental*.
 
@@ -37,7 +37,7 @@ Ribbon has created a matrix that contains all of the tagged releases of the Ribb
 
 The quickstart template allows you to quickly launch a High Availability SBC Cluster with High Availability Front End into AWS to demonstrate the recommended typical High Availability deployment model.
 
-For detailed information, we recommend you first see the [Ribbon High-Availabilty SBC with HFE](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/highavailabilityhfe/existing-stack/byol/HFEautoSubnet.md)
+For detailed information, we recommend you first see the [Ribbon High-Availabilty SBC with HFE](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/highavailabilityhfe/existing-stack/byol/HFEautoSubnet.md) deployment description.
 
 **All Ribbon SBC Supported templates for AWS**
 
