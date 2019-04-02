@@ -26,23 +26,24 @@ Prior to deploying an SBC solution, the following activities should be completed
   - [Upload HFE.sh script to S3](#upload-hfesh-script-to-s3 )
   - [Finding Amazon Linux 2 AMI ID for use in HFE deployments](#finding-amazon-linux-2-ami-id-for-use-in-hfe-deployments)
 
->**Note
->
->Ribbon recommends m5.xlarge or higher instance type if this instance type is available in your zone. Use c5.2xlarge instance type or higher to handle more calls with transcoding.
->
->As of release 7.2S405, only following Instance types are supported for deployment in AWS:
->
->  - m5.xlarge
->  - m5.2xlarge
->  - c5.2xlarge
->  - c5.4xlarge
->  - c5.9xlarge
->  - c5n.2xlarge
->  - c5n.4xlarge
->  - c5n.9xlarge
->  - p3.2xlarge
->
->Any prior release deployments using C3, C4 or M4 instance types will need to be migrated to the newer instance types.**
+# Supported Instance Types
+
+
+Ribbon recommends m5.xlarge or higher instance type if this instance type is available in your zone. Use c5.2xlarge instance type or higher to handle more calls with transcoding.
+
+As of release 7.2S405, only following Instance types are supported for deployment in AWS:
+
+  - m5.xlarge
+  - m5.2xlarge
+  - c5.2xlarge
+  - c5.4xlarge
+  - c5.9xlarge
+  - c5n.2xlarge
+  - c5n.4xlarge
+  - c5n.9xlarge
+
+**Note:** Any prior release deployments using C3, C4 or M4 instance types will need to be migrated to the newer instance types.**
+
 
 # Creating Placement Groups
 
