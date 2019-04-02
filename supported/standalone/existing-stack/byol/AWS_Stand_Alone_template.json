@@ -71,7 +71,7 @@
         "Description" : "EC2 instance type",
         "Type" : "String",
         "Default" : "m5.xlarge",
-        "AllowedValues" : ["m4.xlarge","m5.xlarge", "m5.2xlarge", "c3.2xlarge", "c3.4xlarge", "c3.8xlarge", "c4.2xlarge", "c4.4xlarge", "c4.8xlarge","c5.2xlarge","c5.4xlarge","c5.9xlarge","c5n.2xlarge","c5n.4xlarge","c5n.9xlarge","g3.4xlarge","g3.8xlarge","p3.2xlarge","p3.8xlarge"],
+        "AllowedValues" : ["m5.xlarge", "m5.2xlarge", "c5.2xlarge", "c5.4xlarge","c5.9xlarge","c5n.2xlarge","c5n.4xlarge","c5n.9xlarge", "p3.2xlarge", "g3.4xlarge"],
         "ConstraintDescription" : "Must be a valid EC2 instance type"
       },
 
@@ -957,7 +957,7 @@
           "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ "{ \"ReverseNatPkt0\" : \"", { "Ref" : "ReveseNatEnablePkt0" }, "\"",
             ", \"ReverseNatPkt1\"     : \"", { "Ref" : "ReveseNatEnablePkt1" }, "\"",
             ", \"TemplateName\"       : \"AWS_Stand_Alone_template.json\"",
-            ", \"TemplateVersion\"    : \"V07.02.00A405\"",
+            ", \"TemplateVersion\"    : \"V07.02.00S400\"",
             ", \"CERole\"             : \"", { "Ref" : "CERole" }, "\"",
             ", \"ClusterIp\"          : \"169.254.88.1\"",
             ", \"SbcPersonalityType\" : \"", { "Ref" : "SBCPersonality" } ,"\"",
