@@ -28,7 +28,7 @@ The quickest, easiest way to deploy a CFT is to open the folder called **support
 Then view the associated README, scroll down, and click ![](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg) . 
 
 The CFT opens in the AWS console.
-![](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/images/RBBN-sbc_aws_cloudformation.png")
+![](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/images/RBBN-sbc_aws_cloudformation.png)
 
 To deploy the solution, follow the steps in the wizard.
 
