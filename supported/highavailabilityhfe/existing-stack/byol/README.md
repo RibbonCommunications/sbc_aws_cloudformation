@@ -1,4 +1,4 @@
-**HFE Options**
+## HFE Options ##
 
 For each template, you have different options for licensing your Ribbon SBC. Note that not all options are available for all templates.
 
@@ -8,4 +8,14 @@ For each template, you have different options for licensing your Ribbon SBC. Not
   - [**HFEmanualSubnet**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/highavailabilityhfe/existing-stack/byol/HFEmanualSubnet.md)   
    Creation of the private subnet between the HFE and SBC VEs is to be created manually prior to running the template.
 
+## Files in this repo ##
 
+- **AWS_HA_HFE.json**	- CFT template to use to launch SBC Solution with HFE (manual HFE Private Subnet creation pre-requisite).
+
+- **AWS_HA_HFE_auto_subnet.json**	- CFT template to use to launch SBC Solution with HFE (automated HFE Private Subnet creation).
+
+- **HFEautoSubnet.md**	- README for deploying SBC Solution with HFE - (automatically created HFE Private Subnet).
+
+- **HFEmanualSubnet.md**	- README for deploying SBC Solution with HFE - (manual HFE Private Subnet creation pre-requisite).
+
+- **README.md** - this README file
