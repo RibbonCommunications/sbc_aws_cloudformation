@@ -2,6 +2,7 @@
 
 **Contents**
 - [Introduction](#Introduction)
+- [Files](#Filesinthisrepo)
 - [Pre-requisites for AWS CFN Install of SBC Standalone Instance](#pre-requisites-for-aws-cfn-install-of-sbc-standalone-instance )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating a standalone SBC Instance](#instantiating-a-standalone-sbc-instance)
@@ -17,6 +18,11 @@ This solution uses a CloudFormation Template to launch a single Ribbon SBC VE in
 This is an existing stack template, meaning the networking infrastructure MUST be available prior to deploying. See the Template Parameters Section for required networking objects. See the production stack directory for additional deployment options.
 
 For information on getting started using Ribbon SBC CFT templates on GitHub, see [**Amazon Web Services: Solutions 101**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/AmazonWebServices-Solutions_101.md).
+
+## Files in this repo ##
+
+**AWS_Stand_Alone_template.json**	- CFT template to use to launch this SBC Solution. 
+**README.md** - this README file
 
 ## Pre-requisites for AWS CFN Install of SBC Standalone Instance  
 
