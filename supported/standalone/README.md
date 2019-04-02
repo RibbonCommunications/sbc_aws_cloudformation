@@ -11,7 +11,7 @@ templates.
     that all of the cloud networking infrastructure must be available
     prior to launching the template.
 
-  - **Production Stack**   
+  - [**Production Stack**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone/production-stack) 
   
     Production stack templates also require the cloud networking
     infrastructure to be in place, however these templates do not create
