@@ -1,4 +1,4 @@
-# Amazon Web Services: Solutions 101
+# Amazon Web Services: Ribbon SBC Solutions 101
 
 You can create Ribbon SBC configurations quickly, reliably, and without being an expert in cloud or Ribbon SBC by using the AWS CloudFormation templates (CFTs) on [https://github.com/RibbonCommunications/sbc_aws_cloudformation](https://github.com/RibbonCommunications/sbc_aws_cloudformation).
 
