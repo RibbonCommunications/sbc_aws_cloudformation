@@ -20,7 +20,7 @@ To get started with AWS SBC CFTs, visit [https://github.com/RibbonCommunications
 
 The CFTs themselves that Ribbon supports are in a folder called **supported**.
 
-The **experimental** folder contains CFTs that have not been as rigorously tested as the supported CFTs, but that you can still use them in test environments.
+The **experimental** folder contains CFTs that have not been as rigorously tested as the supported CFTs, however you could still use them in test environments. Ribbon will not provide support for this CFTs.
 
 The quickest, easiest way to deploy a CFT is to open the folder called **supported** and navigate until you find the CFT you want.
 Then view the associated README, scroll down, and click ![](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg) . 
