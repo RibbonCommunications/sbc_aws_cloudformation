@@ -3,7 +3,7 @@
 **Contents**
 - [Introduction](#Introduction)
 - [Why HFE?](#whyhfe?)
-- [Pre-requisites for AWS CFN Install of SBC HA Instances](#pre-requisites-for-aws-cfn-install-of-sbc-ha-instances )
+- [Pre-requisites for AWS CFN Install of SBC HA Instances](#pre-requisites-for-aws-cfn-install-of-sbc-ha-with-hfe )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating an HA SBC with HFE](#instantiating-an-ha-sbc-with-hfe)
 - [Template parameters](#template-parameters)
