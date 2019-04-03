@@ -13,7 +13,7 @@
 
 ## Introduction ##
 
-This solution uses a CloudFormation Template to launch a pair of Ribbon SBC VEs fronted by a forwarding engine VE in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing. 
+This solution uses a CloudFormation Template to launch a pair of Ribbon SBC Instances fronted by a forwarding engine instance in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing. 
 
 This is an existing stack template, meaning the networking infrastructure MUST be available prior to deploying. **Note however, in this deployment a private subnet is automatically allocated between the HFE and SBC.**
 
