@@ -14,15 +14,8 @@ Prior to deploying an SBC solution, the following activities should be completed
   - [Creating Identity and Access Management -IAM- Role for SBC](#creating-identity-and-access-management--iam--role-for-SBC )
   
 **For HighAvailabity with High Availability Front End deployments**:
- 
- - [Creating Placement Groups](#creating-placement-groups)
-  - [Creating VPC for SBC]( #creating-vpc-for-sbc)
-  - [Creating Internet Gateway for SBC](#creating-internet-gateway-for-sbc )
-  - [Creating Subnets for SBC](#creating-subnets-for-sbc )
-  - [Creating Route Tables for SBC]( #creating-route-tables-for-sbc)
-  - [Creating Security Groups for SBC]( #creating-security-groups-for-sbc)
-  - [Creating Key Pairs for SBC](#creating-key-pairs-for-sbc )
-  - [Creating Identity and Access Management -IAM- Role for SBC](#creating-identity-and-access-management--iam--role-for-SBC )  - [Creating Identity and Access Management -IAM- Role for HFE](#creating-identity-and-access-management--iam--role-for-hfe )
+  - All of the Standalone and HighAvailabity pre-requisites apply, plus.... 
+  - [Creating Identity and Access Management -IAM- Role for HFE](#creating-identity-and-access-management--iam--role-for-hfe )
   - [Upload HFE.sh script to S3](#upload-hfesh-script-to-s3 )
   - [Finding Amazon Linux 2 AMI ID for use in HFE deployments](#finding-amazon-linux-2-ami-id-for-use-in-hfe-deployments)
 
