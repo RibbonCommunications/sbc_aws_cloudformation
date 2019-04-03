@@ -276,10 +276,8 @@ It is recommended to open the following ports using Inbound/Ingress rules in the
 | Custom TCP rule | TCP          | 2024           | 0.0.0.0/0  | SSH to Linux                                                      |
 | HTTP            | TCP          | 80             | 0.0.0.0/0  | EMA                                                               |
 | HTTPS           | TCP          | 443            | 0.0.0.0/0  | REST to ConfD DB                                                  |
-| Custom UDP rule | UDP          | 3057           | 0.0.0.0/0  | Used for load balancing service                                   |
 | Custom UDP rule | UDP          | 3054           | 0.0.0.0/0  | Call processing requests                                          |
 | Custom UDP rule | UDP          | 3055           | 0.0.0.0/0  | Keep Alive and Registration                                       |
-| Custom TCP rule | TCP          | 4019           | 0.0.0.0/0  | Applicable to D-SBC only                                          |
 | Custom UDP rule | UDP          | 5093           | 0.0.0.0/0  | SLS (license server) traffic                                      |
 | Custom TCP rule | TCP          | 444            | 0.0.0.0/0  | Communicating with EMS, AWS EC2-API server, and Platform Manager. |
 
