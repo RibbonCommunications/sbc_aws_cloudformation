@@ -26,9 +26,7 @@ For information on getting started using Ribbon SBC CFT templates on GitHub, see
 
 In AWS, High Availability is provided through the use of Elastic IP (EIP). With EIP, when a switchover is required from an active SBC instance to a standby instance, the IP address for the active server is moved to the standby instance through a REST API call, which can result in a 15 – 20 second switchover time. While this solution may be acceptable for the majority of web-based applications it does not meet the requirements needed for SBCs for real-time communications.
 
-To accomplish switchover times closer to 2 seconds Ribbon added an HA Front-End (HFE) to our AWS architecture solution to host the Elastic IP
-
-The High-Availability Front-End (HFE) is a lightweight instance with minimal processes used to forward packets from Public IP addresses to private IP addresses on the SBC. With the HFE, the public IP and secondary IP address of the active and standby SBC instances are separated, with the public IP address anchored on the HFE. During a switchover from active to standby only the secondary IP address is re-anchored from the active to standby node. This reduces the switchover time down to approximately 2 seconds.
+To accomplish switchover times closer to 2 seconds Ribbon added an HA Front-End (HFE) to our AWS architecture solution to host the Elastic IP.
 
 ## Pre-requisites for AWS CFN Install of SBC HA with HFE Instances 
 
