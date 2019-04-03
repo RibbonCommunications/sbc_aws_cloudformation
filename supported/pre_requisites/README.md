@@ -7,7 +7,7 @@ Prior to deploying an SBC solution, the following activities should be completed
   - [Creating Placement Groups](#creating-placement-groups)
   - [Creating VPC for SBC]( #creating-vpc-for-sbc)
   - [Creating Internet Gateway for SBC](#creating-internet-gateway-for-sbc )
-  - [Creating Subnets for SBC](d#creating-subnets-for-sbc )
+  - [Creating Subnets for SBC]( #creating-subnets-for-sbc )
   - [Creating Route Tables for SBC]( #creating-route-tables-for-sbc)
   - [Creating Security Groups for SBC]( #creating-security-groups-for-sbc)
   - [Creating Key Pairs for SBC](#creating-key-pairs-for-sbc )
