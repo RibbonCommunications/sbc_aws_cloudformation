@@ -31,7 +31,7 @@ Prior to deploying an SBC solution, the following activities should be completed
 
 Ribbon recommends m5.xlarge or higher instance type if this instance type is available in your zone. Use c5.2xlarge instance type or higher to handle more calls with transcoding.
 
-As of release 7.2S405, only following Instance types are supported for deployment in AWS:
+As of release 7.2S400, only following Instance types are supported for deployment in AWS:
 
   - m5.xlarge
   - m5.2xlarge
@@ -41,6 +41,8 @@ As of release 7.2S405, only following Instance types are supported for deploymen
   - c5n.2xlarge
   - c5n.4xlarge
   - c5n.9xlarge
+  - g3.4xlarge
+  - p3.2xlarge
 
 **Note:** Any prior release deployments using C3, C4 or M4 instance types will need to be migrated to the newer instance types.**
 
