@@ -28,7 +28,7 @@ In AWS, High Availability is provided through the use of Elastic IP (EIP). With 
 
 To accomplish switchover times closer to 2 seconds Ribbon added an HA Front-End (HFE) to our AWS architecture solution to host the Elastic IP.
 
-## Pre-requisites for AWS CFN Install of SBC HA with HFE Instances 
+## Pre-requisites for AWS CFN Install of SBC HA with HFE
 
 Prior to initiating a CFN-based install of an HA SBC instance with HFE perform the following:
 
