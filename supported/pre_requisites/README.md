@@ -2,6 +2,7 @@
 
 Prior to deploying an SBC solution, the following activities should be completed. See sections below for details.
 
+
 **For Standalone and HighAvailability deployments**
 
   - [Creating Placement Groups](#creating-placement-groups)
@@ -12,13 +13,15 @@ Prior to deploying an SBC solution, the following activities should be completed
   - [Creating Security Groups for SBC]( #creating-security-groups-for-sbc)
   - [Creating Key Pairs for SBC](#creating-key-pairs-for-sbc )
   - [Creating Identity and Access Management -IAM- Role for SBC](#creating-identity-and-access-management--iam--role-for-SBC )
-  
+
+
 **For HighAvailabity with High Availability Front End deployments**
 
 All of the Standalone and HighAvailabity pre-requisites apply, plus:
   - [Creating Identity and Access Management -IAM- Role for HFE](#creating-identity-and-access-management--iam--role-for-hfe )
   - [Upload HFE.sh script to S3](#upload-hfesh-script-to-s3 )
   - [Finding Amazon Linux 2 AMI ID for use in HFE deployments](#finding-amazon-linux-2-ami-id-for-use-in-hfe-deployments)
+
 
 # Supported Instance Types
 
