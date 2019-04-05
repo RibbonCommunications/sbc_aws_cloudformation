@@ -4,9 +4,10 @@ You can create Ribbon SBC configurations quickly, reliably, and without being an
 
 Each CFT creates a pre-configured Ribbon SBC solution, saving you the time and effort involved in a manual configuration.
 CFTs can create configurations like:
-- Two SBC instances with failover/high availability
-- An SBC "triplet" consisting of two SBC instances with High Availability Front End to fast EIP-based failover/high availability 
 - A standalone SBC instance
+- Two SBC instances for failover/high availability
+- An SBC "triplet" consisting of two SBC instances with High Availability Front End to dramatically reduce the time for EIP-based failover
+
 
 Additionally, each CFT can introduce a Ribbon SBC into an existing environment (useful when you already have apps in the cloud and want to add SBC)
 
