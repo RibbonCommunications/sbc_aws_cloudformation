@@ -33,12 +33,6 @@ Descriptions for each template are contained at the top of each template in the�
 
 Ribbon has created a matrix that contains all of the tagged releases of the Ribbon SBC Cloud Formation Templates (CFTs) for Amazon AWS. See the [AWS SBC Matrix](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/aws-sbc-version-matrix.md).
 
-**Quick Start**
-
-The quickstart template allows you to quickly launch a High Availability SBC Cluster with High Availability Front End into AWS to demonstrate the recommended typical High Availability deployment model.
-
-For detailed information, we recommend you first see the [Ribbon High-Availabilty SBC with HFE](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/highavailabilityhfe/existing-stack/byol/HFEautoSubnet.md) deployment description.
-
 **All Ribbon SBC Supported templates for AWS**
 
 To see a list of all of our supported AWS CloudFormation templates, see the [**AWS SBC Supported Template index**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/aws-sbc-template-index.md).
