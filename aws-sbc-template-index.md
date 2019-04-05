@@ -24,7 +24,7 @@ Click the title links below to view the README files which include the Launch bu
    
    [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_HFE_HA_template_auto_subnet.json)
  
-[**High-Availability SBC with Front END (HFE subnet manual allocation**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailabilityhfe/existing-stack/byol/HFEmanualSubnet.md)
+[**High-Availability SBC with Front END (HFE subnet manual allocation)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailabilityhfe/existing-stack/byol/HFEmanualSubnet.md)
 - Existing Stack for HA-SBC with HFE frontend to minimize failover times - all subnets must be pre-allocated.
    -	BYOL (bring your own license)
    
