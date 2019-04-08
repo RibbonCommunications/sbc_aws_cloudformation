@@ -196,7 +196,7 @@ In order for your new subnets to have routing outside the VPC, you must ensure t
 
 In this example we will create an explicit route table and assign the MGT, PKT0, PKT1 and HFE(if required) subnets to it. Note that you could create separate route tables for each of the MGT, PKT0, PKT1 and HFE subnets if desired.
 
-AWS uses the most specific route in your route table that matches the traffic to determine how to route the traffic (longest prefix match). You need to have the rule to route all the non-Virtual Private Clouds (VPC) traffic to internet gateway or ensure that the internet traffic is routed through your own NAT instance or gateway. If you cannot provide a way to send out the SBC API query to the internet, the HA solution fails (SBC) in AWS.
+AWS uses the most specific route in your route table that matches the traffic to determine how to route the traffic (longest prefix match). You need to have the rule to route all the non-Virtual Private Clouds (VPC) traffic to internet gateway or ensure that the internet traffic is routed through your own NAT instance or gateway. 
 
 For example, the following route table has a route for IPv4 Internet traffic 0.0.0.0/0 that points to an Internet gateway. Any traffic destined for a target within the VPC (10.0.0.0/16) is covered by the Local route, and therefore, routed within the VPC. All other traffic from the subnet uses the internet gateway.
 
