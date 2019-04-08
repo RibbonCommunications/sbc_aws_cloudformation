@@ -1,4 +1,4 @@
-# Deploying Ribbon SBC HA in AWS with BYOL Licensing
+# Deploying Ribbon SBC HA on AWS with BYOL Licensing
 
 **Contents**
 - [Introduction](#Introduction)
@@ -13,7 +13,7 @@
 
 ## Introduction ##
 
-This solution uses a CloudFormation Template to launch a pair of Ribbon SBC VEs in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing.
+This solution uses a CloudFormation template to launch a pair of Ribbon SBC VEs in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing.
 
 This is an existing stack template, meaning the networking infrastructure MUST be available prior to deploying. See the Template Parameters Section for required networking objects. See the production stack directory for additional deployment options.
 
