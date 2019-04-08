@@ -1,4 +1,4 @@
-# Ribbon SBC AWS SBC Instantiate Pre-Requisites
+# Ribbon SBC on AWS - Instantiate Pre-Requisites
 
 Prior to deploying an SBC solution, the following activities should be completed. See sections below for details.
 
