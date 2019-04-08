@@ -13,7 +13,7 @@ The following table contains all of the tagged releases of the Ribbon SBC CloudF
 <tbody>
 <tr class="odd">
 <td><strong>7.2.0</strong></td>
-<td>standalone</td>
+<td>Standalone</td>
 <td>AWS_Stand_Alone_template</td>
 <td>SBC 07.02.00S400</td>
 </tr>
