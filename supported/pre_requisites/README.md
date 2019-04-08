@@ -28,7 +28,7 @@ All of the Standalone and HighAvailabity pre-requisites apply, plus:
 
 Ribbon recommends m5.xlarge or higher instance type if this instance type is available in your zone. Use c5.2xlarge instance type or higher to handle more calls with transcoding.
 
-As of release 7.2S400, only following Instance types are supported for deployment in AWS:
+As of release 7.2S400, only following instance types are supported for deployment on AWS:
 
   - m5.xlarge
   - m5.2xlarge
@@ -82,7 +82,7 @@ To create a placement group, perform the following steps:
 
 ## VPC Overview
 
-An SBC deployment requires a VPC with at least 4 IPv4 subnets:
+Deployment of the Ribbon SBC requires a VPC with at least 4 IPv4 subnets:
 
   - Management (MGT0)
 
@@ -155,7 +155,7 @@ For more information concerning internet gateways see [**VPC Internet Gateway**]
 
 
 
-An SBC deployment requires a VPC with sufficient IP space to support 4 or 5 IPv4 subnets:
+Deployment of the Ribbon SBC requires a VPC with sufficient IP space to support 4 or 5 IPv4 subnets:
 
   - Management (MGT0)
 
@@ -165,7 +165,7 @@ An SBC deployment requires a VPC with sufficient IP space to support 4 or 5 IPv4
 
   - Packet 1 (PKT1)
 
-  - High-Availability-forwarding Engine Public Subnet (HFE Public-facing) - depending on deployment type
+  - High Availability Front End Public Subnet (HFE public-facing) - depending on deployment type
 
 
 These subnets can be created within an existing VPC or a new VPC can be allocated. All 4 subnets must reside within the same region/VPC and availability zone.
@@ -186,17 +186,17 @@ To create a new subnet with CIDR x.x.x.x/20 within an existing VPC:
 
 7.  Click on **Create subnet** to create a subnet for PKT1 usingan IPv4 CIDR block, e.g. x.x.48.0/20
 
-8.  IF a High-Availability Forwarded Engine instance is to be deployed with the SBC, a public-facting subnet must be used. An existing    public-facing subnet can be re-used. If not available, click on **Create subnet** to create a subnet for HFE Public-facing using an    IPv4 CIDR block, e.g. x.x.64.0/20
+8.  If a High Availability Front End instance is to be deployed with the SBC, a public-facting subnet must be used. An existing    public-facing subnet can be re-used. If not available, click on **Create subnet** to create a subnet for HFE public-facing using an    IPv4 CIDR block, e.g. x.x.64.0/20
 
 For more information on creating subnets in AWS, refer to [**Add a Subnet**](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-vpcs.html#AddaSubnet ) 
 
 # Creating Route Tables for SBC
 
-In order for your new Subnets to have routing outside the VPC, you must ensure the new subnets created have appropriate inbound and outbound routes in a route table. You can choose to update the master route table (which is implicitly assigned to your new subnets - or you can define a new route table and explicitly associate it with your subnets.
+In order for your new subnets to have routing outside the VPC, you must ensure the new subnets created have appropriate inbound and outbound routes in a route table. You can choose to update the master route table (which is implicitly assigned to your new subnets - or you can define a new route table and explicitly associate it with your subnets.
 
 In this example we will create an explicit route table and assign the MGT, PKT0, PKT1 and HFE(if required) subnets to it. Note that you could create separate route tables for each of the MGT, PKT0, PKT1 and HFE subnets if desired.
 
-AWS uses the most specific route in your route table that matches the traffic to determine how to route the traffic (longest prefix match). You need to have the rule to route all the non-Virtual Private Clouds (VPC) traffic to internet gateway or ensure that the internet traffic is routed through your own NAT instance or Gateway. If you cannot provide a way to send out the SBC API query to the internet, the HA solution fails (SBC) in AWS.
+AWS uses the most specific route in your route table that matches the traffic to determine how to route the traffic (longest prefix match). You need to have the rule to route all the non-Virtual Private Clouds (VPC) traffic to internet gateway or ensure that the internet traffic is routed through your own NAT instance or gateway. If you cannot provide a way to send out the SBC API query to the internet, the HA solution fails (SBC) in AWS.
 
 For example, the following route table has a route for IPv4 Internet traffic 0.0.0.0/0 that points to an Internet gateway. Any traffic destined for a target within the VPC (10.0.0.0/16) is covered by the Local route, and therefore, routed within the VPC. All other traffic from the subnet uses the internet gateway.
 
