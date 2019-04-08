@@ -5,15 +5,15 @@ Ribbon has created templates grouped into the following categories. Each of the 
   - [**Standalone**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone)
   
     These templates deploy an individual SBC instance. Standalone SBC
-    instances are primarily used for Dev/Test/Staging.
+    instances are primarily used for Dev/Test/Staging
 
   - [**HighAvailability**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailability)
   
     These templates deploy an Active and a Standby SBC instance in a
     cluster. High Availability clusters are primarily used to replicate
-    traditional Active/Standby SBC deployments. The failover can result
-    in a 15-20 second switchover time if using EIP for signaling or
-    media.   
+    traditional Active/Standby SBC deployments. Failover from the Active
+    to Standby instance can result in a 15-20 second switchover time if
+    using EIP for signaling or media.   
       
     In these deployments, an individual SBC instance in the cluster owns
     (or is Active for) a particular set of signaling and media IP
@@ -27,9 +27,9 @@ Ribbon has created templates grouped into the following categories. Each of the 
   - [**HighAvailabilityHFE**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailabilityhfe)
   
     These templates deploy an Active and a Standby SBC instance, plus a
-    High Availability Front End in a cluster. High Availability clusters
-    with Front End are primarily used to replicate traditional
-    Active/Standby SBC deployments with fast switchover times.   
+    High Availability Front End (HFE) in a cluster. High Availability clusters
+    with HFE are primarily used to replicate traditional
+    Active/Standby SBC deployments with faster switchover times.   
       
     In AWS, High Availability is provided through the use of Elastic IP
     (EIP). With EIP, when a switchover is required from an active SBC
@@ -40,10 +40,9 @@ Ribbon has created templates grouped into the following categories. Each of the 
     meet the requirements needed for SBCs for real-time communications.
 
 > To accomplish switchover times closer to 2 seconds Ribbon added an HA
-> Front-End (HFE) to our AWS architecture solution to host the Elastic
-> IP.
+> Front End to our AWS architecture solution to host the Elastic IP.
 > 
-> The High-Availability Front-End (HFE) is a lightweight instance with
+> The High Availability Front End (HFE) is a lightweight instance with
 > minimal processes used to forward packets from Public IP addresses to
 > private IP addresses on the SBC. With the HFE, the public IP and
 > secondary IP address of the active and standby SBC instances are
