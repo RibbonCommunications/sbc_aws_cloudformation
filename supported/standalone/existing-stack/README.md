@@ -8,6 +8,6 @@ For each template, you have different options for licensing your Ribbon SBC. Not
 
   - **PAYG**   
   
-    Pay as you go (PAYG) templates allow you to use hourly licensing. At the present time Ribbon does not support pay as you go for the SBC.
+    Pay as you go (PAYG) templates allow you to use hourly licensing. At the present time Ribbon does not support pay as you go option for the SBC.
 
 
