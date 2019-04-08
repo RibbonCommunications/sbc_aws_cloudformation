@@ -170,7 +170,7 @@ Perform the following steps to view the SBC SWe instances created:
 <tr class="even">
 <td>System configuration</td>
 <td><strong>IAMRole</strong></td>
-<td>The name of the IAM role for SBC SWe instance. For more information on IAM Role, see Creating Identity and Access Management (IAM) Roles.</td>
+<td>The name of the IAM role for SBC instance. For more information on IAM Role, see Creating Identity and Access Management (IAM) Roles.</td>
 <td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
@@ -226,7 +226,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>System configuration</td>
 <td><strong>InstanceType</strong></td>
 <td><p>Type of instance that is created from stack.</p>
-<p>Note: Sonus recommends m5.xlarge or higher instance type if this instance type is available in your zone. Use c5.2xlarge instance type or higher to handle more calls with transcoding.</p></td>
+<p>Note: Ribbon recommends m5.xlarge or higher instance type if this instance type is available in your zone. Use c5.2xlarge instance type or higher to handle more calls with transcoding.</p></td>
 <td><strong>  X  </strong></td>
 <td>  </td>
 <td>  </td>
