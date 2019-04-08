@@ -226,7 +226,7 @@ For detailed information on the Route Table, refer to [**VPC Route Tables**](htt
 
 6.  Click on the **Close** button to close the screen.
 
-7.  The Route Table screen is once again displays. You will be able to see the new route table in the list of route tables.
+7.  The Route table screen is once again displays. You will be able to see the new route table in the list of route tables.
 
 8.  Select your route table from the list and select **Edit routes** from the **Actions** pulldown to open the Edit Routes screen.  
       
@@ -303,7 +303,7 @@ It is recommended to open the following ports using Inbound/Ingress rules in the
 | Custom TCP rule | TCP          | 5061           | x.x.x.x/y  |
 | Custom UDP rule | UDP          | 1024-65535     | x.x.x.x/y  |
 
-The source ranges for the packet security group may be external IP address ranges or they may be the HFE private subnet CIDR if a High-availability Forwarding Engine is present in the configuration.
+The source ranges for the packet security group may be external IP address ranges or they may be the HFE private subnet CIDR if a HFE is present in the configuration.
 
 
 
@@ -325,7 +325,7 @@ The source ranges for the packet security group may be external IP address range
 | Custom TCP rule | TCP          | 5061           | x.x.x.x/y is the PKT0 or PKT1 subnet CIDR which is to have external connectivity |
 | Custom UDP rule | UDP          | 1024-65535     | x.x.x.x/y is the PKT0 or PKT1 subnet CIDR which is to have external connectivity |
 
-The source ranges for the HFE Private-facing Port security group may be the private subnet CIDR of the SBC PKT0 or PKT1 subnets.
+The source ranges for the HFE private-facing port security group may be the private subnet CIDR of the SBC PKT0 or PKT1 subnets.
 
 
 
@@ -377,7 +377,7 @@ It is recommended to open allports using Outbound/Egress rules in the security g
 
 8.  Repeat steps **3** through **7** to create the new security group for HA, PKT0, and PKT1 subnets.
 
-9.  If deploying with a High-availability Forwarding Engine option, repeat steps **3** through **7** to create a new security group for the HFE public- and private-facing subnets.
+9.  If deploying with the HFE option, repeat steps **3** through **7** to create a new security group for the HFE public- and private-facing subnets.
 
  >  For more information, refer to [**VPC Security Groups**](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html ) 
 
@@ -658,7 +658,7 @@ For more information on creating and using IAM roles and policies, refer to AWS 
 
 # Upload HFE.sh script to S3
 
-Launching of a High-availabilty Front End instance requires access to the HFE.sh script. This script is to be uploaded to an S3 bucket available to your region in advance of a launch attempt of the HFE. The HFE.sh script and role can be re-used across multiple instances of HFE nodes in your region.
+Launching of a High Availabilty Front End instance requires access to the HFE.sh script. This script is to be uploaded to an S3 bucket available to your region in advance of a launch attempt of the HFE. The HFE.sh script and role can be re-used across multiple instances of HFE nodes in your region.
 
 To make HFE.sh script available do the following:
 
@@ -705,7 +705,7 @@ To make HFE.sh script available do the following:
 
 # Finding Amazon Linux 2 AMI ID for use in HFE deployments
 
-The High-Availabiltity Front-End (HFE) is a lightweight instance with minimal processes used to forward packets from Public IP addresses to private IP addresses on the SBC. The HFE runs on a standard Amazon Linux 2 instance.
+The High Availabiltity Front-End (HFE) is a lightweight instance with minimal processes used to forward packets from Public IP addresses to private IP addresses on the SBC. The HFE runs on a standard Amazon Linux 2 instance.
 
 To find the AMI id of the latest Amazon Linux 2 image in your region do the following:
 
