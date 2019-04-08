@@ -2,8 +2,8 @@
 
 You can create Ribbon SBC configurations quickly, reliably, and without being an expert in cloud or Ribbon SBC by using the AWS CloudFormation templates (CFTs) on [https://github.com/RibbonCommunications/sbc_aws_cloudformation](https://github.com/RibbonCommunications/sbc_aws_cloudformation).
 
-Each CFT creates a pre-configured Ribbon SBC solution, saving you the time and effort involved in a manual configuration.
-CFTs can create configurations like:
+Each CFT creates a pre-configured set of AWS EC2 resources for a Ribbon SBC solution, saving you the time and effort involved in a manual configuration.
+CFTs can create configurations for:
 - A standalone SBC instance
 - Two SBC instances for failover/high availability
 - An SBC "triplet" consisting of two SBC instances with High Availability Front End to dramatically reduce the time for EIP-based failover
