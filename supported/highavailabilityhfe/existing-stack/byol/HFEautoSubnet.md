@@ -1,4 +1,4 @@
-# Deploying Ribbon SBC HA with Forwarding Engine (HFE) in AWS with BYOL Licensing (HFE private subnet automatically created)
+# Deploying Ribbon SBC with High Availability Forwarding Engine (HFE) on AWS with BYOL Licensing (HFE private subnet automatically created)
 
 **Contents**
 - [Introduction](#Introduction)
@@ -13,7 +13,7 @@
 
 ## Introduction ##
 
-This solution uses a CloudFormation Template to launch a pair of Ribbon SBC Instances fronted by a forwarding engine instance in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing. 
+This solution uses a CloudFormation template to launch a pair of Ribbon SBC instances fronted by a HFE instance in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing. 
 
 This is an existing stack template, meaning the networking infrastructure MUST be available prior to deploying. **Note however, in this deployment a private subnet is automatically allocated between the HFE and SBC.**
 
@@ -22,7 +22,7 @@ See the Template Parameters Section for required networking objects.
 See the production stack directory for additional deployment options.
 
 > **NOTE**
-> The High-Availability Front End (HFE) front-ends only one pkt port (pkt0), public endpoints can be connected only to pkt0. Pkt1 can serve private endpoints.
+> The High Availability Front End (HFE) front-ends only one pkt port (pkt0), public endpoints can be connected only to pkt0. Pkt1 can serve private endpoints.
 
 > **NOTE**
 > The HFE is configured using a script named "HFE.sh". This script is available in addition to example CloudFormation templates which support deployment of an HA SBC with HFE. Both "HFE.sh" and CFN files are required to deploy an SBC with High-Availability Front-End.
