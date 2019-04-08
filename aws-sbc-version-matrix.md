@@ -1,5 +1,5 @@
 ## Version Matrix for AWS CFT Templates
-The following table contains all of the tagged releases of the Ribbon SBC Cloud Formation Templates (CFTs) for Amazon AWS, and the corresponding SBC versions, license types and throughput levels available for a specific tagged release.  To view a Tag, from the sbc_aws_cloudformation repo (https://github.com/RibbonCommunications/sbc_aws_cloudformation/ or a sub directory), click the Branch < current branch > button, and then click the *Tags* tab.  You see a list of all of the SBC tagged releases.
+The following table contains all of the tagged releases of the Ribbon SBC CloudFormation templates (CFTs) for Amazon AWS, and the corresponding SBC versions, license types and throughput levels available for a specific tagged release.  To view a Tag, from the sbc_aws_cloudformation repo (https://github.com/RibbonCommunications/sbc_aws_cloudformation/ or a sub directory), click the Branch < current branch > button, and then click the *Tags* tab.  You see a list of all of the SBC tagged releases.
 
 <table>
 <thead>
