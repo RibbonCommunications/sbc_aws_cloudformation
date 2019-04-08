@@ -1,4 +1,4 @@
-# Deploying Ribbon SBC with High Availability Forwarding Engine (HFE) on AWS with BYOL Licensing (HFE private subnet automatically created)
+# Deploying Ribbon HA SBC with High Availability Front End (HFE) on AWS with BYOL Licensing (HFE private subnet automatically created)
 
 **Contents**
 - [Introduction](#Introduction)
