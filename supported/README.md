@@ -51,4 +51,4 @@ Ribbon has created templates grouped into the following categories. Each of the 
 > re-anchored from the active to standby node. This reduces the
 > switchover time down to approximately 2 seconds.
 > 
-> For more information, see the highavailabilityHFE README files.
+> For more information, see the highavailabilityHFE README files. 
