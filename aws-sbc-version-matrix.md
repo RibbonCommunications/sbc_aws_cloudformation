@@ -34,5 +34,5 @@ The following table contains all of the tagged releases of the Ribbon SBC CloudF
 <td> </td>
 <td>AWS_HFE_HA_template_auto_subnet</td>
 <td>SBC 07.02.00S400</td>
-</tr>
+</tr> 
 </table>
