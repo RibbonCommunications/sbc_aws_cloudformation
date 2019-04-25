@@ -14,5 +14,5 @@
 *.jpg binary
 *.data binary
 *   -crlf
-* -lf
+* -lf 
  
