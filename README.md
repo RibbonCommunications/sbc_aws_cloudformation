@@ -39,4 +39,4 @@ To see a list of all of our supported AWS CloudFormation templates, see the [**
 
 **Copyright**
 
-Copyright 2019 Ribbon Communications LLC
+Copyright 2019 Ribbon Communications LLC 
