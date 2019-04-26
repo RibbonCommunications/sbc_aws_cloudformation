@@ -1,4 +1,4 @@
-# Deploying Ribbon HA SBC with High Availability Forwarding Engine (HFE) in AWS with BYOL Licensing
+# Deploying Ribbon HA SBC with High Availability Forwarding Engine (HFE) in AWS with BYOL Licensing (HFE subnet manual allocation)
 
 **Contents**
 - [Introduction](#Introduction)
