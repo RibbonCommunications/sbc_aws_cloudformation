@@ -2,6 +2,12 @@
 
 Ribbon has created templates grouped into the following categories. Each of the templates has pre-requisites. For details about pre-requisites see [here](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/pre_requisites).
 
+  - [**Marketplace CFT**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/marketplace)
+  
+    Master template available from AWS Marketplace.
+    Prompts user to select the SBC mode to launch (SA, HA or HAHFE) and then 
+    collects information to launch one of the CFT templates below.
+
   - [**Standalone**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone)
   
     These templates deploy an individual SBC instance. Standalone SBC
