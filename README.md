@@ -1,6 +1,8 @@
 # Ribbon SBC CloudFormation Templates
 CloudFormation templates for quickly deploying a Ribbon SBC on Amazon Web Services EC2
 
+To see a list of all of our supported AWS CloudFormation templates, see the [**AWS SBC Supported Template index**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/aws-sbc-template-index.md).
+
 **Introduction**
 
 Welcome to the GitHub repository for Ribbon SBC's CloudFormation templates for deploying a Ribbon SBC on Amazon Web Services. All of the templates in this repository have been developed by Ribbon.
@@ -33,9 +35,7 @@ Descriptions for each template are contained at the top of each template in the�
 
 Ribbon has created a matrix that contains all of the tagged releases of the Ribbon SBC Cloud Formation Templates (CFTs) for Amazon AWS. See the [AWS SBC Matrix](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/aws-sbc-version-matrix.md).
 
-**All Ribbon SBC Supported templates for AWS**
 
-To see a list of all of our supported AWS CloudFormation templates, see the [**AWS SBC Supported Template index**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/aws-sbc-template-index.md).
 
 **Copyright**
 
