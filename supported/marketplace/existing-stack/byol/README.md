@@ -16,9 +16,9 @@ This is an existing stack template, meaning the networking infrastructure MUST b
     
 For information on getting started using Ribbon SBC CFT templates on GitHub, see [**Amazon Web Services: Solutions 101**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/AmazonWebServices-Solutions_101.md).
 
-This CloudFormation template prompts the user to select the SBC mode to launch (SA, HA or HAHFE) and then collects information to launch one of the CFT templates below. 
+This CloudFormation template prompts the user to select the SBC mode to launch (SA, HA or HAHFE) and then collects information to launch one of the SBC deployment solutions below. 
 
-Click on the title links below to find more information about the different SBC deployment options and their pre-requisites:
+Click on the title links below to find more information about the different SBC deployment solutions and their pre-requisites:
 
 [**Standalone SBC (SA)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone/existing-stack/byol)
 - requires existing stack
