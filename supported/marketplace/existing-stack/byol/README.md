@@ -3,29 +3,48 @@
 **Contents**
 - [Introduction](#Introduction)
 - [Files](#Files-in-this-repo)
-- [Pre-requisites for AWS CFN Install of SBC Standalone Instance](#pre-requisites-for-aws-cfn-install-of-sbc-standalone-instance )
 - [Supported Instance types](#supported-instance-types )
-- [Instantiating a standalone SBC Instance](#instantiating-a-standalone-sbc-instance)
 - [Template parameters](#template-parameters)
-- [Configuration Example](#configuration-example)
 - [More documentation](#more-documentation)
 - [Getting Help](#support-information)
 
 ## Introduction ##
 
-This solution uses a CloudFormation template to launch a single Ribbon SBC instance in an Amazon Virtual Private Cloud, using BYOL (bring your own license) licensing.
+This is the master CloudFormation template available from AWS Marketplace.
 
 This is an existing stack template, meaning the networking infrastructure MUST be available prior to deploying. See the Template Parameters Section for required networking objects. See the production stack directory for additional deployment options.
 
 For information on getting started using Ribbon SBC CFT templates on GitHub, see [**Amazon Web Services: Solutions 101**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/AmazonWebServices-Solutions_101.md).
 
+This CloudFormation template prompts the user to select the SBC mode to launch (SA, HA or HAHFE) and then collects information to launch one of the CFT templates below. Click on the title links below to find more information about the different SBC deployment options and their pre-requisites:
+
+[**Standalone SBC (SA)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone/existing-stack/byol)
+- requires existing stack
+- includes single SBC instance but provides no application redundancy 
+- BYOL (bring your own license)
+     
+     [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/templates/SA.template)
+ 
+[**High Availability SBC (HA)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailability/existing-stack/byol)
+- requires existing stack  
+- instantiates includes active and standby instances with application redundancy 
+- BYOL (bring your own license)
+   
+   [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/templates/HA.template)
+ 
+[**High Availability SBC with Front End (HAHFE)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailabilityhfe/existing-stack/byol/HFEmanualSubnet.md)
+- requires existing stack.
+- instantiates HA-SBC with HFE to minimize failover times - all subnets must be pre-allocated.
+- BYOL (bring your own license)
+   
+   [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/templates/HAHFE.template)
+
+
 ## Files in this repo ##
 
-- **AWS_Stand_Alone_template.json**	- CFT template to use to launch this SBC Solution.
+- **marketplace_cft_1.1**	- CFT master template as posted in marketplace - allows selection of which SBC mode to deploy .
 
 - **README.md** - this README file
-
-## Pre-requisites for AWS CFN Install of SBC Standalone Instance  
 
 ## Supported Instance Types
 
@@ -41,80 +60,6 @@ As of release 7.2S405, only following Instance types are supported for deploymen
   - g3.4xlarge
   - p3.2xlarge
   
-  ## Instantiating a standalone SBC Instance
-
-The easiest way to deploy this CloudFormation template is to use the Launch Stack button.
-
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_Stand_Alone_template.json)
-
-To manually instantiate  a standalone instance:
-
-1.  Log onto AWS.
-
-2.  Click the  **Services**  drop-down list.  
-    The  **Services**  list is displayed.
-
-3.  Click  **CloudFormation**  from Management Tools section.  
-    The stacks page displays.
-
-4.  Click  **Create Stack**.
-    The  **Select Template**  page displays.
-
-5.  In the  **Choose a template**  section, select  **Upload a template to Amazon S3**.
-
-6.  Click  **Choose File** to  navigate through the folders and select the template.  
-    The selected template displays.
-
-7.  Click  **Next**.  
-    The  **Create A New Stack**  page displays.
-
-> Note
-> 
-> If wishing to use pre-allocated EIPs for management, please be sure to set EIPAssociationForMgt to No at that field prompt.
-> 
-> After the deployment has completed you will need to manually associate the pre-allocated EIP to Mgmt (Eth0) Primary and secondary IPs .
-
-8.  In the **Stack name** field enter a  unique name  for this SBC stack.
-    A stack is a collection of AWS resources you create and delete as a single unit.
-
-9.  Enter the required values for the Parameter fields. The following [table](#template-parameters) describes the create stack parameters
-
-10. Click **Next**.  
-    The  **Options**  page displays.
-
-11. Optionally you can choose to Tag your deployment with a Key-value
-    pair, IAM Role Permissions, Rollback Triggers or other advanced
-    Options.
-
-12. Click **Next**.  
-    The **Review** page displays.  
-      
-
-13. Review the stack details and click **Create**  
-    The **CloudFormation Stacks** page is displayed.
-
-> On successful stack creation the stack will be listed.
-
->  - Do not update or modify the stack after creation.
-
->  - Do not change or remove resources after instance creation. For example, removing or attaching EIP, or changing the user data and so on.
-  
-## Verify the Instance Creation
-
-Perform the following steps to view the SBC SWe instances created:
-
-1.  Click the  **Services**  drop-down list.  
-    The  **Services**  list is displayed.
-
-2.  From the left pane click  **EC2**.
-
-> The  **EC2 Dashboard**  page is displayed.  
->   
-
-3.  From the left pane under  **Instances**  click  **Instances**.  
-    The instances table lists the  new instance.
-
-> If you delete an instance from CFN, be aware that AWS does not delete volume(s) automatically. You must also delete them from the AWS UI if you do not want volumes of deleted instances (standalone, HA or HFN-based SBC installation).  
 ## Template Parameters  
   
   **Table**  :  Create Stack Parameters
@@ -507,4 +452,14 @@ eipalloc-0f2e0f651bbf494fe,eipalloc-0a9ab9d240705c149,eipalloc-04e59f946b14980b8
 </tbody>
 </table>
   
-  
+## More documentation
+
+For more information on Ribbon SBC solutions, including manual configuration instructions for SBC features, see the Ribbon SBC documentation suite here: https://support.sonus.net/display/SBXDOC72 .
+
+## Support Information
+
+Support for BYOL products with valid licenses is provided through the Ribbon Support Portal ( https://ribboncommunications.com/services/ribbon-support-portal-login )
+
+## Copyright
+
+Copyright 2019 Ribbon Communications LLC
