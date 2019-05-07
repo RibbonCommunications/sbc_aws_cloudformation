@@ -12,6 +12,7 @@ You can click the Launch Stack buttons to immediately launch the template stored
 - requires existing stack.
 - Master template available from AWS Marketplace. 
 - Prompts user to select the SBC mode to launch (SA, HA or HAHFE) and then collects information to launch one of the CFT templates below. 
+- BYOL (bring your own license)
 
     [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/templates/marketplace_cft_1.1)
 
