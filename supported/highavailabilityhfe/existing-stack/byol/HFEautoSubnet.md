@@ -1,5 +1,7 @@
 # Deploying Ribbon HA SBC with High Availability Front End (HFE) on AWS with BYOL Licensing (HFE private subnet automatically created)
 
+**Note - not presently supported using Amazon Marketplace provided CloudFormation Templates. Contact Ribbon for assistance. **
+
 **Contents**
 - [Introduction](#Introduction)
 - [Why HFE?](#why-hfe)
