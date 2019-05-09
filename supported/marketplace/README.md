@@ -5,13 +5,13 @@ into which you want to deploy the SBC. See the individual README files
 for exact requirements. Note that not all options are available for all
 templates.
 
-  - [**Existing Stack**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone/existing-stack)
+  - [**Existing Stack**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/marketplace/existing-stack)
   
     These templates deploy into an existing cloud network. This means
     that all of the cloud networking infrastructure must be available
     prior to launching the template.
 
-  - [**Production Stack**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone/production-stack) 
+  - [**Production Stack**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/marketplace/production-stack) 
   
     Production stack templates also require the cloud networking
     infrastructure to be in place, however these templates do not create
