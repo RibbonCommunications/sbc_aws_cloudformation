@@ -6,7 +6,7 @@ For each template, you have different options for licensing your Ribbon SBC. Not
    Creation of the private subnet between the HFE and SBC VEs must be created manually prior to running the template.  
    
    - [**HFEautoSubnet**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/supported/highavailabilityhfe/existing-stack/byol/HFEautoSubnet.md)   
-    The private subnet created between the HFE and SBC VEs is automatically created by the template - This is presently not supported through marketplace templates. Contact Ribbon for more information.
+    The private subnet created between the HFE and SBC VEs is automatically created by the template - **This is presently not supported through marketplace templates. Contact Ribbon for more information.**
 
 
 
