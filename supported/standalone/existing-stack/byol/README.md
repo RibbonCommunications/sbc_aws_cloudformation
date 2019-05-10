@@ -269,7 +269,7 @@ Perform the following steps to view the SBC SWe instances created:
 </ul></td>
 <td><strong>  X  </strong></td>
 <td>  </td>
-<td>  </td>
+<td><strong>  X  </strong></td>
 </tr>
 <tr class="odd">
 <td>System configuration</td>
