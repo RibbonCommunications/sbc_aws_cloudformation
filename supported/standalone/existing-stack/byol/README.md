@@ -405,7 +405,7 @@ Perform the following steps to view the SBC SWe instances created:
 <td>  </td>
 </tr>
 
-tr class="even">
+<tr class="even">
 <td>Third Party Applications Provisioning</td>
 <td><strong>Third Party CPUs</strong></td>
 <td>Enter number of CPUs to be reserved for use with third party apps. <strong>Note</strong>: Default is 0</td>
