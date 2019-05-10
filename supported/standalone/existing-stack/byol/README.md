@@ -160,6 +160,14 @@ The following parameters are relevant when creating a stack for Standalone SBC i
 </thead>
 
 <tbody>
+<tr class="odd">
+<td>Network configuration</td>
+<td><strong>VpcId</strong></td>
+<td>Select a VPC with Subnet, Security Group, etc., selected earlier.</td>
+<td><strong>  X  </strong></td>
+<td>  </td>
+<td>  </td>
+</tr>
 <tr class="even">
 <td>Network configuration</td>
 <td><strong>SecurityGrpMgt0</strong></td>
@@ -424,14 +432,7 @@ The following parameters are relevant when creating a stack for Standalone SBC i
 <td><strong>  X  </strong>  </td>
 </tr>
 
-<tr class="odd">
-<td>Network configuration</td>
-<td><strong>VpcId</strong></td>
-<td>Select a VPC with Subnet, Security Group, etc., selected earlier.</td>
-<td><strong>  X  </strong></td>
-<td>  </td>
-<td>  </td>
-</tr>
+
 
 </tbody>
 </table>
