@@ -308,7 +308,7 @@ As of release 7.2S405, only following Instance types are supported for deploymen
 </ul></td>
 <td><strong>  X  </strong></td>
 <td>  </td>
-<td>  </td>
+<td><strong>  X  </strong></td>
 </tr>
 <td>SBC configuration</td>
 <td><strong>Volume Type</strong></td>
