@@ -375,7 +375,7 @@ As of release 7.2S405, only following Instance types are supported for deploymen
 </tr>
 <tr class="even">
 <td>HFE configuration</td>
-<td><strong>SecurityGrpPktHFETowardsSBC</strong></td>
+<td><strong>SecurityGrpHFETowardsSBC</strong></td>
 <td>Acts as a firewall for associated Amazon EC2 instances, controlling both inbound and outbound traffic between HFE and SBC.</td>
 <td><strong>  X  </strong></td>
 <td>  </td>
