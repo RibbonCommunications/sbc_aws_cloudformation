@@ -137,6 +137,8 @@ Perform the following steps to view the SBC SWe instances created:
 > If you delete an instance from CFN, be aware that AWS does not delete volume(s) automatically. You must also delete them from the AWS UI if you do not want volumes of deleted instances (standalone, HA or HFN-based SBC installation).  
 ## Template Parameters  
   
+The following parameters are relevant when creating a stack for Standalone SBC instance.
+
   **Table**  :  Create Stack Parameters
 
 > Note
