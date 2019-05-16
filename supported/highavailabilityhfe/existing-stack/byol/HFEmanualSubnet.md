@@ -2,6 +2,7 @@
 
 **Contents**
 - [Introduction](#Introduction)
+- [Files](#files-in-this-repo)
 - [Why HFE?](#whyhfe?)
 - [Pre-requisites for AWS CFN Install of SBC HA with HFE](#pre-requisites-for-aws-cfn-install-of-sbc-ha-with-hfe )
 - [Supported Instance types](#supported-instance-types )
@@ -21,6 +22,14 @@ This is an existing stack template, meaning the networking infrastructure MUST b
 > The HFE is configured using a script named "HFE.sh". This script is available in addition to example CloudFormation templates which support deployment of an HA SBC with HFE. Both "HFE.sh" and CFN files are required to deploy an SBC with High-Availability Front-End.
 
 For information on getting started using Ribbon SBC CFT templates on GitHub, see [**Amazon Web Services: Solutions 101**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/AmazonWebServices-Solutions_101.md).
+
+## Files in this repo ##
+
+- **HFEautoSubnet.md**	- README for deploying SBC Solution with HFE - (automatically created HFE Private Subnet).
+
+- **HFEmanualSubnet.md**	- README for deploying SBC Solution with HFE - (manual HFE Private Subnet creation pre-requisite).
+
+- [**HAHFE.template**](https://s3.amazonaws.com/rbbn-sbc-cft/templates/HAHFE.template) - click to download HFE manual subnet template from S3.
 
 ## Why HFE? ##
 
