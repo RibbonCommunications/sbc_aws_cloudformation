@@ -41,8 +41,8 @@ Click on the title links below to find more information about the different SBC 
 
 ## Files in this repo ##
 
-- **marketplace_cft_1.1**	- CFT master template as posted in marketplace - allows selection of which SBC mode to deploy .
-
+- - [**marketplace_cft_1.1**](https://s3.amazonaws.com/rbbn-sbc-cft/templates/marketplace_cft_1.1) - click to download template from S3.
+CFT master template as posted in marketplace - allows selection of which SBC mode to deploy .
 - **README.md** - this README file
 
 ## Supported Instance Types
