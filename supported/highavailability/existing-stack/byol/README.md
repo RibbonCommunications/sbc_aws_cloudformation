@@ -21,7 +21,7 @@ For information on getting started using Ribbon SBC CFT templates on GitHub, see
 
 ## Files in this repo ##
 
-- **AWS_HA_template.json**	- CFT template to use to launch this SBC Solution.
+- [**HA.template**](https://s3.amazonaws.com/rbbn-sbc-cft/templates/HA.template) - click to download template from S3.
 
 - **README.md** - this README file
 
