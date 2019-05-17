@@ -37,7 +37,7 @@ Click on the title links below to find more information about the different SBC 
 
 **Launch the Ribbon SBC Marketplace CFT**
 
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://s3.amazonaws.com/awsmp-fulfillment-cf-templates-prod/249b66cc-78a7-4da4-8cb5-9abf78961f09.da579e44-3d77-4715-8153-22e0ee531591.template)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/awsmp-fulfillment-cf-templates-prod/249b66cc-78a7-4da4-8cb5-9abf78961f09.da579e44-3d77-4715-8153-22e0ee531591.template)
 
 ## Files in this repo ##
 
