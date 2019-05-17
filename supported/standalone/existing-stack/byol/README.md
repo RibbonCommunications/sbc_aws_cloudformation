@@ -447,7 +447,9 @@ The following is a simple configuration diagram for this Ribbon SBC standalone d
 
 ## More documentation
 
-For more information on Ribbon SBC solutions, including manual configuration instructions for SBC features, see the Ribbon SBC documentation suite here: https://support.sonus.net/display/SBXDOC72 .
+For more information on Ribbon SBC solutions, including manual configuration instructions for SBC features refer to the following:
+- Ribbon AWS SBC 7.2 Release notes here: https://support.sonus.net/display/SBXDOC72/SBC+Core+7.2.0S40x+Public+Cloud+Documentation
+- Full SBC documentation suite here: https://support.sonus.net/display/SBXDOC72 .
 
 ## Support Information
 
