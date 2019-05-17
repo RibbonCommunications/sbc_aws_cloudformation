@@ -22,7 +22,8 @@ For information on getting started using Ribbon SBC CFT templates on GitHub, see
 ## Files in this repo ##
 
 - **README.md** - this README file
-- [**SA.template**](https://s3.amazonaws.com/rbbn-sbc-cft/templates/SA.template) - click to download template from S3.
+- [**marketplace-master-template**](https://s3.amazonaws.com/awsmp-fulfillment-cf-templates-prod/249b66cc-78a7-4da4-8cb5-9abf78961f09.da579e44-3d77-4715-8153-22e0ee531591.template) - click to download master template which will call SA template if SBC mode chosen is SA.
+- [**Ribbon-SAStack.template**](http://awsmp-fulfillment-cf-templates-prod.s3.amazonaws.com/249b66cc-78a7-4da4-8cb5-9abf78961f09/da579e44-3d77-4715-8153-22e0ee531591/Ribbon-SAStack.template) - click to download SA stack template from S3.
 
 ## Pre-requisites for AWS CFN Install of SBC Standalone Instance  
 
@@ -64,9 +65,9 @@ As of release 7.2S405, only following Instance types are supported for deploymen
   
 ## Instantiating a standalone SBC Instance
 
-The easiest way to deploy this CloudFormation template is to use the Launch Stack button.
+The easiest way to deploy this CloudFormation template is to use the Launch Stack button, then choose SA as SBC Mode.
 
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_Stand_Alone_template.json)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://s3.amazonaws.com/awsmp-fulfillment-cf-templates-prod/249b66cc-78a7-4da4-8cb5-9abf78961f09.da579e44-3d77-4715-8153-22e0ee531591.template )
 
 To manually instantiate  a standalone instance:
 
