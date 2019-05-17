@@ -83,7 +83,7 @@ As of release 7.2S405, only following Instance types are supported for deploymen
 
 The easiest way to deploy this CloudFormation template is to use the Launch Stack button.
 
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_HFE_HA_template_auto_subnet.json)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)]( )
 
 To manually instantiate HA SBC instances with HFE:
 
@@ -554,7 +554,9 @@ The following is a simple configuration diagram for this Ribbon SBC HA deploymen
 
 ## More documentation
 
-For more information on Ribbon SBC solutions, including manual configuration instructions for SBC features, see the Ribbon SBC documentation suite here: https://support.sonus.net/display/SBXDOC72 .
+For more information on Ribbon SBC solutions, including manual configuration instructions for SBC features refer to the following:
+- Ribbon AWS SBC 7.2 Release notes here: https://support.sonus.net/display/SBXDOC72/SBC+Core+7.2.0S40x+Public+Cloud+Documentation
+- Full SBC documentation suite here: https://support.sonus.net/display/SBXDOC72 .
 
 ## Support Information
 
