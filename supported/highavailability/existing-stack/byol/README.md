@@ -21,8 +21,8 @@ For information on getting started using Ribbon SBC CFT templates on GitHub, see
 
 ## Files in this repo ##
 
-- [**HA.template**](https://s3.amazonaws.com/rbbn-sbc-cft/templates/HA.template) - click to download template from S3.
-
+- [**marketplace-master-template**](https://s3.amazonaws.com/awsmp-fulfillment-cf-templates-prod/249b66cc-78a7-4da4-8cb5-9abf78961f09.da579e44-3d77-4715-8153-22e0ee531591.template) - click to download master template which will call HA template if SBC mode chosen is HA.
+- [**Ribbon-HAStack.template**](http://awsmp-fulfillment-cf-templates-prod.s3.amazonaws.com/249b66cc-78a7-4da4-8cb5-9abf78961f09/da579e44-3d77-4715-8153-22e0ee531591/Ribbon-HAStack.template) - click to download HA stack template from S3.
 - **README.md** - this README file
 
 ## Pre-requisites for AWS CFN Install of SBC HA Instances 
@@ -65,9 +65,9 @@ As of release 7.2S405, only following Instance types are supported for deploymen
   
 ## Instantiating an HA SBC
 
-The easiest way to deploy this CloudFormation template is to use the Launch Stack button.
+The easiest way to deploy this CloudFormation template is to use the Launch Stack button and choose SBC Mode of HA which will then use the default HA stack template.
 
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_HA_template.json)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://s3.amazonaws.com/awsmp-fulfillment-cf-templates-prod/249b66cc-78a7-4da4-8cb5-9abf78961f09.da579e44-3d77-4715-8153-22e0ee531591.template)
 
 To manually instantiate HA SBC instances:
 
