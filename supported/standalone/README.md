@@ -7,18 +7,14 @@ templates.
 
   - [**Existing Stack**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone/existing-stack)
   
-    These templates deploy into an existing cloud network. This means
-    that all of the cloud networking infrastructure must be available
+    These templates deploy into a pre-existing VPC. This means that all of the
+    cloud networking and other infrastructure pre-requisites (VPC, Subnets, Route Tables, 
+    Internet gateways, security groups, instance rules/policies, etc) must be available
     prior to launching the template.
 
   - [**Production Stack**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone/production-stack) 
   
-    Production stack templates also require the cloud networking
-    infrastructure to be in place, however these templates do not create
-    or attach a public IP address/NAT (there is never a public IP
-    address assigned to the Management IP address). As SBC's need access
-    to the internet to access Cloud API services and download files for
-    onboarding, these deployments assume Internet access is provided via
-    another Public NAT service, Firewall, etc. In most cases, there is
-    no public IP assigned to the IP addresses on the external interfaces
-    (Virtual Servers, Self IP addresses, etc).
+    These templates will deploy the solution into a new VPC and create the required 
+    infrastructure elements with default values (VPC, Subnets, Route Tables, 
+    Internet gateways, security groups, instance rules/policies, etc). These default values 
+    may need to be changed later to comply with deployment needs.
