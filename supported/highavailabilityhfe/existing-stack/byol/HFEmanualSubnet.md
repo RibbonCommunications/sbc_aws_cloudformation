@@ -3,7 +3,7 @@
 **Contents**
 - [Introduction](#Introduction)
 - [Files](#files-in-this-repo)
-- [Why HFE?](#why-hfe?)
+- [Why HFE?](#why-hfe)
 - [Pre-requisites for AWS CFN Install of SBC HA with HFE](#pre-requisites-for-aws-cfn-install-of-sbc-ha-with-hfe )
 - [Supported Instance types](#supported-instance-types )
 - [Instantiating an HA SBC with HFE](#instantiating-an-ha-sbc-with-hfe)
