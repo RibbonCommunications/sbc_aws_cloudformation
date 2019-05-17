@@ -1,6 +1,6 @@
 # Amazon Web Services: Ribbon SBC Solutions 101
 
-You can create Ribbon SBC configurations quickly, reliably, and without being an expert in cloud or Ribbon SBC by using the AWS CloudFormation templates (CFTs) on [https://github.com/RibbonCommunications/sbc_aws_cloudformation](https://github.com/RibbonCommunications/sbc_aws_cloudformation).
+You can create Ribbon SBC configurations quickly, reliably, and without being an expert in cloud or Ribbon SBC by using the AWS CloudFormation templates (CFTs) available through links in this repository.
 
 Each CFT creates a pre-configured set of AWS EC2 resources for a Ribbon SBC solution, saving you the time and effort involved in a manual configuration.
 CFTs can create configurations for:
@@ -9,7 +9,7 @@ CFTs can create configurations for:
 - An SBC "triplet" consisting of two SBC instances with High Availability Front End to dramatically reduce the time for EIP-based failover
 
 
-Additionally, each CFT can introduce a Ribbon SBC into an existing environment (useful when you already have apps in the cloud and want to add SBC)
+At this time the CFT will only introduce a Ribbon SBC Solution into an existing VPC (useful when you already have apps in the cloud and want to add SBC).
 
 **Note**: AWS CFTs that create new resources are in an experimental folder in github and Ribbon does not support them. However, you’re welcome to play with them to see how things work.
 
@@ -17,9 +17,9 @@ Additionally, each CFT can introduce a Ribbon SBC into an existing environment (
 
 Github is a source control system where CFTs and related resources live.
 
-To get started with AWS SBC CFTs, visit [https://github.com/RibbonCommunications/sbc_aws_cloudformation](https://github.com/RibbonCommunications/sbc_aws_cloudformation). This is a landing page for the latest release of AWS SBC CFTs created by Ribbon.
+To get started with AWS SBC CFTs, visit [https://github.com/RibbonCommunications/sbc_aws_cloudformation](https://github.com/RibbonCommunications/sbc_aws_cloudformation). This is a landing page with links to the latest release of AWS SBC CFTs created by Ribbon.
 
-The CFTs themselves that Ribbon supports are in a folder called **supported**.
+The CFT links themselves that Ribbon supports are in a folder called **supported**.
 
 The **experimental** folder contains CFTs that have not been as rigorously tested as the supported CFTs, however you could still use them in test environments. Ribbon will not provide support for this CFTs.
 
@@ -35,32 +35,7 @@ To deploy the solution, follow the steps in the wizard.
 
 **How to copy a CFT**
 
-If you want your own copy of the CFTs, so you can ensure you don’t accidentally edit someone else’s CFT, there are a few ways to do this.
-
-**Create a clone**
-To create a personal copy of the project and its CFTs, the easiest thing to do is click ![](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/images/cloneOrDownload.png)  in the top right.
-
-You can then download a zip file, use the GIT command line or SSH, or if you have GitHub Desktop installed, download and work with the files there.
-
-For more information about installing Git, see [this page](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-
-To use the GIT command line, open a command window, navigate to the folder where you want to put the content, and type **git clone** with the URL.
-
-For example, **git clone https://github.com/RibbonCommunications/sbc_aws_cloudformation.git**
-
-**Create a fork**
-
-If you want a web-accessible location for your personal CFTs, create a fork of the Ribbon SBC github project.
-
-To do this, click ![](https://github.com/RibbonCommunications/sbc_aws_cloudformation/blob/master/images/fork.png)  in the top right. You can edit files in your fork without affecting anyone else’s work.
-
-**Best practices**
-
-How you work in github is up to you, but here are some do's and don'ts:
-- Do create a clone or fork of the project and mess with files there.
-- Do not create a branch when you’re in the RibbonCommunications project. The developers at Ribbon use these branches to manage their workflow.
-- Do not use experimental templates in production environments. Ribbon does not support it.
-- Do use supported templates, and edit only the custom configuration section detailed below.
+If you want your own copy of the CFTs, you can navigate to the appropriate CFT directory and click on the download links.
 
 ## How to deploy a CFT
 You can deploy a template a few different ways.
@@ -72,7 +47,7 @@ To deploy the CFT, you can log in to the AWS console and go to CloudFormation. E
 For more information about how to use CFTs in AWS, see [this AWS walkthrough](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.Walkthrough.html).
 
 ## View release details
-By default, the main github page shows the latest release of the CFTs. Every 6-12 weeks or so, Ribbon SBC releases a new version.
+By default, the main github page shows the latest release of the CFTs. Ribbon SBC releases new CFT versions periodically.
 Ribbon recommends you use the latest release whenever possible.
 
 The file called aws-sbc-version-matrix.md shows a list of releases, for example:
