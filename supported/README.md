@@ -2,18 +2,18 @@
 
 Ribbon has created templates grouped into the following categories. Each of the templates has pre-requisites. For details about pre-requisites see [here](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/pre_requisites).
 
-  - [**Marketplace CFT**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/marketplace)
+  - [**Marketplace CFT**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/marketplace/existing-stack/byol)
   
     Master template available from AWS Marketplace.
     Prompts user to select the SBC mode to launch (SA, HA or HAHFE) and then 
     collects information to launch one of the CFT templates below.
 
-  - [**Standalone (SA)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone)
+  - [**Standalone (SA)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/standalone/existing-stack/byol)
   
     These templates deploy an individual SBC instance. Standalone SBC
     instances are primarily used for Dev/Test/Staging
 
-  - [**HighAvailability (HA)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailability)
+  - [**HighAvailability (HA)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailability/existing-stack/byol)
   
     These templates deploy an Active and a Standby SBC instance in a
     cluster. High Availability clusters are primarily used to replicate
@@ -30,7 +30,7 @@ Ribbon has created templates grouped into the following categories. Each of the 
     protocols like Gratuitous ARP, route updates, and so on). For more
     information, see the highavailability README files.  
 
-  - [**HighAvailabilityHFE (HAHFE)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailabilityhfe)
+  - [**HighAvailabilityHFE (HAHFE)**](https://github.com/RibbonCommunications/sbc_aws_cloudformation/tree/master/supported/highavailabilityhfe/existing-stack/byol/HFEmanualSubnet.md)
   
     These templates deploy an Active and a Standby SBC instance, plus a
     High Availability Front End (HFE) in a cluster. High Availability clusters
