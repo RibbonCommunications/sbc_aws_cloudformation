@@ -26,10 +26,10 @@ For information on getting started using Ribbon SBC CFT templates on GitHub, see
 ## Files in this repo ##
 
 - **HFEautoSubnet.md**	- README for deploying SBC Solution with HFE - (automatically created HFE Private Subnet).
-
 - **HFEmanualSubnet.md**	- README for deploying SBC Solution with HFE - (manual HFE Private Subnet creation pre-requisite).
-
-- [**HAHFE.template**](https://s3.amazonaws.com/rbbn-sbc-cft/templates/HAHFE.template) - click to download HFE manual subnet template from S3.
+- [**marketplace-master-template**](https://s3.amazonaws.com/awsmp-fulfillment-cf-templates-prod/249b66cc-78a7-4da4-8cb5-9abf78961f09.da579e44-3d77-4715-8153-22e0ee531591.template) - click to download master template which will call HAHFE template if SBC mode chosen is HAHFE.
+- [**Ribbon-HAFHEStack.template**](http://awsmp-fulfillment-cf-templates-prod.s3.amazonaws.com/249b66cc-78a7-4da4-8cb5-9abf78961f09/da579e44-3d77-4715-8153-22e0ee531591/Ribbon-HAHFEStack.template) - click to download HAHFE stack template from S3.
+- [**HFE.sh**](s3://aws-quickstart/quickstart-ribbon-sbc/scripts/HFE.sh) - click to download HFE.sh script used to configure the HFE.
 
 ## Why HFE? ##
 
@@ -81,9 +81,9 @@ As of release 7.2S405, only following Instance types are supported for deploymen
   
 ## Instantiating an HA SBC with HFE
 
-The easiest way to deploy this CloudFormation template is to use the Launch Stack button.
+The easiest way to deploy this CloudFormation template is to use the Launch Stack button and then choose HAHFE as the SBC Mode to launch the HAHFE stack.
 
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/rbbn-sbc-cft/AWS_HFE_HA_template.json)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://s3.amazonaws.com/awsmp-fulfillment-cf-templates-prod/249b66cc-78a7-4da4-8cb5-9abf78961f09.da579e44-3d77-4715-8153-22e0ee531591.template)
 
 To manually instantiate HA SBC instances with HFE:
 
