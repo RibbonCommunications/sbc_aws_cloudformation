@@ -425,33 +425,19 @@ the following permissions:    
   
 
 >  "Statement": \[
->  
 >  {
->  
->  "Effect": "Allow",
->  
->  "Action": \[
->  
+>  "Effect": "Allow",  
+>  "Action": \[  
 >  "ec2:AllocateAddress",
->  
 >  "ec2:AssignPrivateIpAddresses",
->  
 >  "ec2:AssociateAddress",
->  
 >  "ec2:AttachNetworkInterface",
->  
 >  "ec2:DisassociateAddress",
->  
 >  "ec2:DescribeInstances",
->  
 >  "ec2:DescribeNetworkInterfaces"
->  
 >  \],
->  
 >  "Resource": "\*"
->  
 >  }
->  
 >  \]
 
   
@@ -472,33 +458,19 @@ To create a Policy and associate it to a Role for SBC follow these steps:
 5.  Update the policy statement to include the content below
 
 > "Statement": \[
-> 
 > {
-> 
 > "Effect": "Allow",
-> 
 > "Action": \[
-> 
 > "ec2:AllocateAddress",
-> 
 > "ec2:AssignPrivateIpAddresses",
-> 
 > "ec2:AssociateAddress",
-> 
 > "ec2:AttachNetworkInterface",
-> 
 > "ec2:DisassociateAddress",
-> 
 > "ec2:DescribeInstances",
-> 
 > "ec2:DescribeNetworkInterfaces"
-> 
 > \],
-> 
 > "Resource": "\*"
-> 
 > }
-> 
 > \]
 
 6.  Click on Review Policy.
@@ -560,6 +532,7 @@ Attach this policy to a new IAM role. You must enter this IAM role in the templa
  >  "ec2:DescribeRegions",
  >  "ec2:ModifyInstanceAttribute",
  >  "ec2:DescribeSubnets",
+ >  "ec2:DescribeInstanceStatus",
  >  "s3:Get\*",
  >  "s3:List\*",
  >  "events:PutRule",
@@ -607,6 +580,7 @@ steps:
  >  "ec2:DescribeRegions",
  >  "ec2:ModifyInstanceAttribute",
  >  "ec2:DescribeSubnets",
+ >  "ec2:DescribeInstanceStatus",
  >  "s3:Get\*",
  >  "s3:List\*",
  >  "events:PutRule",
